@@ -4,8 +4,16 @@
 
 @section('content')
     <!-- About Section Start -->
-    <div class="rs-about pt-180 md-pt-160 pb-100 md-pb-80 md-pt-80">
+    <div class="rs-about sec-bg pt-180 md-pt-160 pb-100 md-pb-80 md-pt-80">
         <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-style mb-50 md-mb-30">
+                        <h2 class="margin-0 uppercase">Istorija</h2>
+                        <span class="line-bg y-b left-line pt-10"></span>
+                    </div>
+                </div>
+            </div>
             <div class="row align-items-center">
                 <div class="col-lg-5 md-mb-30">
                     <div class="about-img">
@@ -13,10 +21,6 @@
                     </div>
                 </div>
                 <div class="col-lg-7 pl-40 col-padding-md">
-                    <div class="title-style mb-50 md-mb-30">
-                        <h2 class="margin-0 uppercase">Istorija</h2>
-                        <span class="line-bg y-b left-line pt-10"></span>
-                    </div>
                     <div class="about-wrap">
                         <p class="title-color mb-10">Alytaus „Dainava“ – vienas seniausių ir žinomiausių Lietuvos
                             futbolo

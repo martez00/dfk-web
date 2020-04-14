@@ -35,7 +35,7 @@
                                         <!-- Home -->
                                         <li class="@if(Route::currentRouteName() == 'homepage') current-menu-item current_page_item @endif">
                                             <a
-                                                    href="{{ route('homepage') }}" class="home">Pagrindinis</a>
+                                                    href="{{ route('homepage') }}">Pagrindinis</a>
                                         </li>
                                         <!-- End Home -->
 
@@ -52,6 +52,22 @@
                                                 <li class="@if(Route::currentRouteName() == 'club.stadiums') active @endif">
                                                     <a href="{{ route('club.stadiums') }}">Stadionai</a></li>
                                             </ul>
+                                        </li>
+                                        <li class="@if(Route::currentRouteName() == 'attributes') current-menu-item current_page_item @endif">
+                                            <a
+                                                    href="{{ route('attributes') }}">Atributika</a>
+                                        </li>
+                                        <li class="@if(Route::currentRouteName() == 'tickets') current-menu-item current_page_item @endif">
+                                            <a
+                                                    href="{{ route('tickets') }}">Bilietai</a>
+                                        </li>
+                                        <li class="@if(Route::currentRouteName() == 'support') current-menu-item current_page_item @endif">
+                                            <a
+                                                    href="{{ route('support') }}">Parama</a>
+                                        </li>
+                                        <li class="@if(Route::currentRouteName() == 'fans') current-menu-item current_page_item @endif">
+                                            <a
+                                                    href="{{ route('fans') }}">Fanai</a>
                                         </li>
                                         <!--Club Directory Menu End -->
                                     </ul> <!-- //.nav-menu -->

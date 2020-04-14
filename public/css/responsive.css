@@ -305,7 +305,7 @@
 	.menu-area .logo-area img{
 		position: relative;
 		z-index: 11;
-		max-width: 130px !important;
+		height: 65px; !important;
 	}
 	#rs-header .mobile-menu-area {
 		width: 100%;
@@ -351,7 +351,7 @@
 	.full-width-header .rs-header .menu-area .main-menu .rs-menu .sub-menu li.current-menu-item > a {
 		color: #fbc02d !important;
 	}
-	.nav-menu > .menu-item-has-children > span.rs-menu-parent, 
+	.nav-menu > .menu-item-has-children > span.rs-menu-parent,
 	.nav-menu .rs-mega-menu > span.rs-menu-parent {
 	    display: block;
 	    position: absolute;

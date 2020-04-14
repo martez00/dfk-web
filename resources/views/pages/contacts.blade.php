@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Contact Section Start -->
-    <div class="rs-contact">
+    <div class="rs-contact sec-bg">
         <div class="rs-contact-icon pt-180 md-pt-160 pb-100 md-pb-80 md-pt-80">
             <div class="container">
                 <div class="title-style mb-50 md-mb-30">

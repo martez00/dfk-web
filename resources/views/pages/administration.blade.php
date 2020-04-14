@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="rs-board-staff pt-180 md-pt-160 pb-100 md-pb-80 md-pt-80">
+    <div class="rs-board-staff sec-bg pt-180 md-pt-160 pb-100 md-pb-80 md-pt-80">
         <div class="container">
             <div class="title-style mb-50 md-mb-30">
                 <h2 class="margin-0 uppercase">Administracija</h2>
