@@ -1,7 +1,7 @@
 <!--Full width header Start-->
 <div class="full-width-header">
     <!--Header Start-->
-    <header id="rs-header" class="rs-header homestyle" @if($headerWithoutBackground === true) style="background: transparent !important;" @endif>
+    <header id="rs-header" class="rs-header homestyle">
         <!-- Menu Start -->
         <div class="menu-area">
             <div class="container-fluid">

@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- About Section Start -->
-    <div class="rs-about sec-bg pt-180 md-pt-160 pb-100 md-pb-80 md-pt-80">
+    <div class="rs-about sec-bg pt-180 md-pt-160 pb-100 md-pb-80">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

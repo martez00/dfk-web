@@ -28,8 +28,8 @@
     @yield('head')
 </head>
 
-<body class="@yield('bodyClass')">
-@include('sections.header', ['headerWithoutBackground' => isset($headerWithoutBackground) ? $headerWithoutBackground : false])
+<body>
+@include('sections.header')
 @yield('content')
 @include('sections.footer')
 
