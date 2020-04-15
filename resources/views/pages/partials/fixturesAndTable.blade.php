@@ -2,7 +2,7 @@
 <div class="couter-and-upcomming pt-100 md-pt-80 mb-30">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 pr-0 col-padding-md md-mb-30">
+            <div class="col-lg-6 col-padding-md md-mb-30">
                 <div class="rs-upcoming-match bg1 text-center">
                     <div class="title-style">
                         <h4 class="margin-0 white-color">Upcoming Match</h4>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 pr-0 col-padding-md md-mb-30">
+            <div class="col-lg-6 col-padding-md md-mb-30">
                 <div class="rs-pointtable no-overflow gaps bg3 bdru-4">
                     <table>
                         <tbody>

@@ -1,4 +1,4 @@
-@extends('template')
+@extends('template', ['headerWithoutBackground' => true])
 
 @section('content')
     @include('pages.partials.newsSlider')

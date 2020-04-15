@@ -777,7 +777,10 @@ blockquote i:before {
 }
 .full-width-header .rs-header {
   z-index: 99;
-  background-color: #214790 !important;
+  background: #004187 !important; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(0,34,71,1), rgba(0,65,135,1)) !important;
+  background: linear-gradient(to right, rgba(0,34,71,1), rgba(0,65,135,1)) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .full-width-header .rs-header .menu-area {
   font-family: Fira sans;
@@ -1101,8 +1104,14 @@ blockquote i:before {
   align-items: center;
   overflow: hidden;
 }
+.rs-slider.home-slider .single-slider .container {
+  background-color: rgba(0,0,0,0.39);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 20px;
+  border-radius: 6px;
+}
 .rs-slider.home-slider .single-slider .text-part .sub-title {
-  font-size: 60px;
+  font-size: 40px;
   line-height: 1;
   color: #ffffff;
   font-weight: 500;
@@ -1344,7 +1353,7 @@ blockquote i:before {
   color: #ffffff;
 }
 .rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li.active {
-  color: #fbc02d;
+  color: #fc011e;
 }
 .rs-breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li:last-child:after {
   content: unset;
@@ -4552,12 +4561,12 @@ blockquote i:before {
     31. Sponsor Logo Section CSS
 -------------------------------------*/
 .rs-sponsor .logos a img {
-  filter: grayscale(100%);
-  opacity: .6;
-}
-.rs-sponsor .logos a img:hover {
   filter: grayscale(0);
   opacity: 1;
+}
+.rs-sponsor .logos a img:hover {
+  filter: grayscale(100%);
+  opacity: .6;
 }
 .rs-sponsor.normal-mood .logos a img {
   filter: unset;
@@ -4645,14 +4654,14 @@ blockquote i:before {
     34. Footer Section CSS
 -------------------------------------*/
 .rs-footer {
-  background: url(../images/background/footer-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  z-index: 99;
+  background: #004187 !important; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(0,34,71,1), rgba(0,65,135,1)) !important;
+  background: linear-gradient(to right, rgba(0,34,71,1), rgba(0,65,135,1)) !important;
 }
 .rs-footer .footer-bootom {
   padding: 15px 0;
-  background: #214790;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 .rs-footer .footer-bootom .copyright p {
   margin: 0;
@@ -4686,25 +4695,6 @@ blockquote i:before {
 }
 .rs-footer .footer-bootom .footer-share ul li:last-child {
   margin: 0;
-}
-.rs-footer.dark-mode {
-  background: url(../images/background/footer-dark-bg.jpg);
-  position: relative;
-}
-.rs-footer.dark-mode .footer-bootom {
-  position: absolute;
-  content: '';
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-.rs-footer.dark-mode .footer-bootom .footer-share ul li a {
-  color: #111111;
-  background: #ffffff;
-}
-.rs-footer.dark-mode .footer-bootom .footer-share ul li a:hover {
-  color: #fbc02d;
 }
 /* -------------------------------------
     35. Error Section CSS

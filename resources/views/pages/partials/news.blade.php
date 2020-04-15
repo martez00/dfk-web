@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 md-mb-30">
                         <div class="latest-news-grid small-grid">
                             <div class="news-img">
                                 <a href="#"><img src="images/latest-news/4.jpg" alt="News Image"></a>

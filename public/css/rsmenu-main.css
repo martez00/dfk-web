@@ -41,7 +41,7 @@ Version: 1.0.0
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	SUB-MENUS SETTINGS 
+/*	SUB-MENUS SETTINGS
 /*-----------------------------------------------------------------------------------*/
 /* Hide sub-menus */
 .rs-menu ul ul {
@@ -49,10 +49,10 @@ Version: 1.0.0
 	top: 100%;
 	width: 100%;
 	display: none;
-	background-color: #111111; 
+	background-color: #111111;
 }
 .rs-menu ul ul.visible,
-.rs-menu ul .rs-mega-menu ul.visible ul.sub-menu {	
+.rs-menu ul .rs-mega-menu ul.visible ul.sub-menu {
 	display:block;
    	z-index: 110;
 }
@@ -63,7 +63,7 @@ Version: 1.0.0
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	SUB-MENUS APPEARANCE 
+/*	SUB-MENUS APPEARANCE
 /*-----------------------------------------------------------------------------------*/
 /* Place border bottom */
 .rs-menu ul ul li {
@@ -95,11 +95,11 @@ Version: 1.0.0
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  APPEARANCE SETTINGS 
+/*  APPEARANCE SETTINGS
 /*-----------------------------------------------------------------------------------*/
 .rs-menu a {
     color:#bbb;
-	
+
 	/* Remove the blue Webkit background when element is tapped */
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
@@ -113,7 +113,7 @@ Version: 1.0.0
 	font-size: 13px !important;
 }
 
-.nav-menu > li > a { 
+.nav-menu > li > a {
 	font-size: 16px;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -126,7 +126,7 @@ Version: 1.0.0
 	margin-right:10px;
 	font-size:16px;
 	/* Make the font smoother for Chrome */
-	transform:translate3d(0, 0, 0);    
+	transform:translate3d(0, 0, 0);
 }
 
 /* Put down arrows */
@@ -144,7 +144,7 @@ Version: 1.0.0
 	margin-bottom:24px;
 }
 
-.nav-menu li .mega-menu li a {    
+.nav-menu li .mega-menu li a {
     padding:0;
 	width:auto;
 	display:inline-block;
@@ -161,8 +161,8 @@ Version: 1.0.0
 }
 
 /* Sub-menus - font size and text alignment*/
-.rs-menu ul ul a {   
-    font-size: 16px;	
+.rs-menu ul ul a {
+    font-size: 16px;
     text-align: left;
 }
 
@@ -188,7 +188,7 @@ Version: 1.0.0
 
 .nav-menu .mega-menu {
     width: 44%;
-	position: absolute;   
+	position: absolute;
 }
 
 .nav-menu .mega-menu .mega-menu-container {
@@ -204,7 +204,7 @@ Version: 1.0.0
 	width:auto;
     padding:0;
     min-height:initial;
-    box-shadow:none;   
+    box-shadow:none;
 }
 
 .nav-menu .mega-menu .sub-menu a {
@@ -242,10 +242,10 @@ Version: 1.0.0
 
 @media screen and (min-width: 992px) {
 	.rs-menu {
-		/*border:1px solid #000;*/    
+		/*border:1px solid #000;*/
 		height: auto !important;
 	}
-	
+
 	.rs-menu h1 {
 		font-size: 3.2rem;
 		line-height: 1.2em;
@@ -259,11 +259,11 @@ Version: 1.0.0
 	.rs-menu h3 {
 		font-size: 2rem;
 	}
-	
+
 	.rs-menu h4 {
 		font-size: 1rem;
 	}
-	
+
 	/* Grid */
    .rs-menu .row [class*="col-"] {
       display: block;
@@ -334,62 +334,62 @@ Version: 1.0.0
 	.rs-menu li {
     	display:inline-block;
 	}
-	
+
 	.nav-menu .rs-mega-menu {
     	position: static;
 	}
-	
+
 	.rs-menu ul ul.visible {
 		visibility: hidden;
     	opacity:0;
 	}
-	
+
 	/* Remove arrows if not in mobile */
 	.nav-menu .menu-item-has-children > span, .nav-menu .rs-mega-menu > span {
 		display:none;
 	}
-	
-	/* Remove Menu Toggle if not in mobile */	
+
+	/* Remove Menu Toggle if not in mobile */
 	.rs-menu-toggle {
 		display:none;
 	}
-	
+
 	/* Remove Menu Close if not in mobile */
 	.nav-menu div.sub-menu-close {
 		display:none;
 	}
-	
-	
+
+
 	/* Show sub-menus in hover */
-	.rs-menu li:active > ul, 
-	.rs-menu li:focus > ul, 
-	.rs-menu li:hover > ul, 
-	.rs-menu li:hover > ul.mega-menu > li > ul, 
-	.rs-menu li:hover ul.mega-menu .sub-menu {		
+	.rs-menu li:active > ul,
+	.rs-menu li:focus > ul,
+	.rs-menu li:hover > ul,
+	.rs-menu li:hover > ul.mega-menu > li > ul,
+	.rs-menu li:hover ul.mega-menu .sub-menu {
 		display:block;
-		z-index: 17;	
+		z-index: 17;
 	}
 
 	/* Adjust position the sub-menus in the left */
 	.rs-menu ul ul li > ul {
 		right: 100%;
 	}
-	
+
 	/* Adjust position the sub-menus on the top */
 	.rs-menu ul ul ul {
 		top: 0;
-	}	
-	
+	}
+
 	.rs-menu ul ul {
 		width:auto;
 	}
-	
+
 	/* Sub-menus - width */
 	.rs-menu ul ul a {
 		width: 260px;	/* <- Modify for width change */
 	}
-	
-	.nav-menu .mega-menu li div.mega-menu-img a {	
+
+	.nav-menu .mega-menu li div.mega-menu-img a {
 		width:25%;
 	}
     .nav-menu .mega-menu li div.mega-menu-innner .single-magemenu {
@@ -397,7 +397,7 @@ Version: 1.0.0
         float: left;
         padding: 0 12px;
     }
-		
+
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -405,19 +405,19 @@ Version: 1.0.0
 /*-----------------------------------------------------------------------------------*/
 @media screen and (min-width:0\0) {
 	.rs-menu img {
-    	width:100%;    	
+    	width:100%;
 	}
-	
+
     .nav-menu .menu-item-has-children a, .nav-menu .rs-mega-menu a {
         padding-right:24px
     }
-	
-    .nav-menu .menu-item-has-children a:after, 
+
+    .nav-menu .menu-item-has-children a:after,
     .nav-menu .rs-mega-menu a:after {
         position:static;
         float:right;
         margin:0 -16px 0 0
-    }   
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -428,60 +428,60 @@ Version: 1.0.0
        margin-right: 0!important;
     }
 
-    
+
     .rs-menu-close {
         height: 0;
         overflow: hidden !important;
     }
-   	
+
 	.nav-menu > li > a {
 		border-bottom:1px solid #131313;
 		color: #fff;
 		text-align: left;
 	}
-	
+
 	.nav-menu > li:last-child > a {
     	border-bottom:none;
 	}
-	
-	.nav-menu span.rs-menu-parent i { 
+
+	.nav-menu span.rs-menu-parent i {
 		margin: 0;
 	}
-	
-	.nav-menu > .menu-item-has-children > span.rs-menu-parent, 
-	.nav-menu .rs-mega-menu > span.rs-menu-parent {		
+
+	.nav-menu > .menu-item-has-children > span.rs-menu-parent,
+	.nav-menu .rs-mega-menu > span.rs-menu-parent {
 		display: block;
 		position: absolute;
 		right: 0;
 		top: 0;
-		padding: 20px;	
+		padding: 20px;
 		cursor:pointer;
 		line-height: 15px;
-		background: #ddd;	
-		
+		background: #ddd;
+
 		/* Remove the blue Webkit background when element is tapped */
-		-webkit-tap-highlight-color:rgba(0,0,0,0);    
-	}	
-	
-	.nav-menu > .menu-item-has-children > span.rs-menu-parent:hover, 
-	.nav-menu .rs-mega-menu > span.rs-menu-parent:hover {	
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+	}
+
+	.nav-menu > .menu-item-has-children > span.rs-menu-parent:hover,
+	.nav-menu .rs-mega-menu > span.rs-menu-parent:hover {
 		color: #fff;
 	}
-	
-	.nav-menu > .menu-item-has-children .sub-menu .menu-item-has-children span.rs-menu-parent {		
+
+	.nav-menu > .menu-item-has-children .sub-menu .menu-item-has-children span.rs-menu-parent {
 		display: block;
 		position: absolute;
 		right: 0;
 		top: 0;
 		padding: 0 20px;
 		height: 39px;
-		line-height: 43px !important;	
+		line-height: 43px !important;
 		cursor: pointer;
 		line-height: 15px;
-		border-left:1px solid rgba(0, 0, 0, .05);		
-		
+		border-left:1px solid rgba(0, 0, 0, .05);
+
 		/* Remove the blue Webkit background when element is tapped */
-		-webkit-tap-highlight-color:rgba(0,0,0,0);    
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
 	}
 
 	/*Options Menu Closed*/
@@ -489,19 +489,19 @@ Version: 1.0.0
 		float:left;
 		width:100%;
 		cursor:pointer;
-		background:#f6f3ed;		
+		background:#f6f3ed;
 		color:#000;
 		font-size:14px;
-		text-align:center;	
+		text-align:center;
 		height: 50px;
 		line-height: 50px;
 	}
-	
-	.nav-menu div.sub-menu-close i {		
+
+	.nav-menu div.sub-menu-close i {
 		font-size:16px;
 		margin-right: 5px;
 	}
-	
+
 	.rs-menu .sub-menu {
 		-webkit-box-shadow: 0 0 20px rgba(0,0,0,.15);
 		-moz-box-shadow: 0 0 20px rgba(0,0,0,.15);
@@ -509,23 +509,23 @@ Version: 1.0.0
 		-o-box-shadow:  0 0 20px rgba(0,0,0,.15);
 		box-shadow:  0 0 20px rgba(0,0,0,.15);
 	}
-	
+
 	/*Menu Toggle Appearance*/
-	.rs-menu-toggle {      
+	.rs-menu-toggle {
 		padding: 28px 0;
 		display: block;
 		background: #222;
 		border-left: 1px solid #222;
 		position: relative;
-		cursor:pointer;		
+		cursor:pointer;
 		color: #fff !important;
 		font-size: 15px;
 		text-transform: uppercase;
 		height: 82px;
-		
+
 		-webkit-tap-highlight-color:rgba(0,0,0,0);
 	}
-	
+
 }
 
 

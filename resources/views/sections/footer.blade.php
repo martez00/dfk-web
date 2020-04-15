@@ -6,44 +6,19 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2">
                     <div class="row">
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-4 col-12 text-center">
                             <div class="logos">
                                 <a href="#"><img src="{{ asset('images/sponsor/1.png') }}" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-4 col-12 text-center">
                             <div class="logos">
                                 <a href="#"><img src="{{ asset('images/sponsor/2.png') }}" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-6">
+                        <div class="col-lg-4 col-12 text-center">
                             <div class="logos">
                                 <a href="#"><img src="{{ asset('images/sponsor/3.png') }}" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <div class="logos">
-                                <a href="#"><img src="{{ asset('images/sponsor/4.png') }}" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <div class="logos">
-                                <a href="#"><img src="{{ asset('images/sponsor/5.png') }}" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <div class="logos">
-                                <a href="#"><img src="{{ asset('images/sponsor/6.png') }}" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <div class="logos">
-                                <a href="#"><img src="{{ asset('images/sponsor/7.png') }}" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                            <div class="logos">
-                                <a href="#"><img src="{{ asset('images/sponsor/8.png') }}" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -59,17 +34,17 @@
             <div class="row rs-vertical-middle">
                 <div class="col-md-7">
                     <div class="copyright">
-                        <p>© 2020 DFK „Dainava“. Created by Martynas Sebestinas.
+                        <p>© {{ date("Y") }} DFK „Dainava“. Created by Martynas Sebestinas.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="footer-share text-right">
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                            <li><a href="https://www.facebook.com/dfkdainava" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/dfkdainava/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCuK0LS-BG10-l_M0prCGFGQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="https://lt.linkedin.com/in/fa-dainava-69a833159" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
