@@ -18,6 +18,12 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 //admin
-Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
-    Route::get('/', ['uses' => 'AdminPagesController@index', 'as' => 'admin_index']);
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin_access']], function () {
+    Route::get('/', ['uses' => 'Admin\AdminPageController@index', 'as' => 'admin_index']);
+
+    Route::group(['prefix' => 'stats', 'middleware' => ['stats_admin']], function () {
+        Route::resource('seasons', 'Admin\SeasonController');
+        Route::resource('tournaments', 'Admin\TournamentController');
+        Route::resource('teams', 'Admin\TeamController');
+    });
 });
