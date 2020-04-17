@@ -1,5 +1,5 @@
 @if (count($errors) || Session::has('success') || Session::has('status') || Session::has('error'))
-        <div class="row mt-3">
+        <div class="row">
             <div class="col-md-12">
                 @if (count($errors))
                     <div class="alert alert-danger">

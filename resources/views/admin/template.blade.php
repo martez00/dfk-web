@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', env('APP_TITLE') . ' – Admin')</title>
 
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.html') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/fav.png') }}">
     <link rel="stylesheet" href="{{ bustCache('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ bustCache('css/font-awesome.min.css') }}">
 
@@ -17,9 +19,11 @@
 <body>
 @include('admin.sections.header')
 
-<div class="container mt-3">
-    @include('admin.partials.alerts')
-    @yield('content')
+<div class="container">
+    <div class="content bg-light p-3 light-shadow rounded">
+        @include('admin.partials.alerts')
+        @yield('content')
+    </div>
 </div>
 
 <script src="{{ bustCache('js/jquery.min.js') }}"></script>

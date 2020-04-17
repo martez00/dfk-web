@@ -19,7 +19,12 @@ Route::group(['prefix' => 'admin'], function () {
 
 //admin
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin_access']], function () {
-    Route::get('/', ['uses' => 'Admin\AdminPageController@index', 'as' => 'admin_index']);
+    Route::get('/', ['uses' => 'Admin\AdminPageController@index', 'as' => 'admin.index']);
+
+    Route::group(['middleware' => ['admin']], function () {
+        Route::get('settings', ['uses' => 'Admin\SettingController@edit', 'as' => 'settings']);
+        Route::post('settings', ['uses' => 'Admin\SettingController@update', 'as' => 'settings.update']);
+    });
 
     Route::group(['prefix' => 'stats', 'middleware' => ['stats_admin']], function () {
         Route::resource('seasons', 'Admin\SeasonController');

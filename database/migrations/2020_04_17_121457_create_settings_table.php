@@ -1,10 +1,11 @@
 <?php
 
+use App\Setting;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTeamsTable extends Migration
+class CreateSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +14,17 @@ class CreateTeamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('short_name', 5)->nullable();
-            $table->string('country', 30)->nullable();
-            $table->string('city', 30)->nullable();
-            $table->string('phone_number', 20)->nullable();
-            $table->string('email', 50)->nullable();
-            $table->string('address', 100)->nullable();
+            $table->string('value')->nullable();
             $table->timestamps();
         });
+
+        $mainTeamSetting = new Setting();
+        $mainTeamSetting->name = 'main_team';
+        $mainTeamSetting->value = null;
+        $mainTeamSetting->save();
     }
 
     /**
@@ -33,6 +34,6 @@ class CreateTeamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teams');
+        Schema::dropIfExists('settings');
     }
 }
