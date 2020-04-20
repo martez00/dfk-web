@@ -14,7 +14,7 @@
             @endif
             <div class="card">
                 <div class="card-header font-weight-bold">
-                    Komandos
+                    Komanda
                 </div>
                 <form method="POST" action="{{ $formUrl }}" enctype="multipart/form-data">
                     @isset($team)
@@ -91,19 +91,27 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 col-xs-12">
+                            <div class="col-md-4 col-xs-12">
                                 <div class="form-group">
-                                    <label for="title">El. paštas</label>
+                                    <label for="email">El. paštas</label>
                                     <input type="email" class="form-control form-control-sm" id="email" name="email"
                                            value="{{ isset($team) ? $team->email : old('email') }}">
                                 </div>
                             </div>
-                            <div class="col-md-6 col-xs-12">
+                            <div class="col-md-4 col-xs-12">
                                 <div class="form-group">
-                                    <label for="level">Tel. nr.</label>
-                                    <input type="text" class="form-control form-control-sm" id="level"
+                                    <label for="phone_number">Tel. nr.</label>
+                                    <input type="text" class="form-control form-control-sm" id="phone_number"
                                            name="phone_number"
                                            value="{{ isset($team) ? $team->phone_number : old('phone_number') }}">
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12">
+                                <div class="form-group">
+                                    <label for="website">Tinklalapis</label>
+                                    <input type="text" class="form-control form-control-sm" id="website"
+                                           name="website"
+                                           value="{{ isset($team) ? $team->website : old('website') }}">
                                 </div>
                             </div>
                         </div>
@@ -113,6 +121,50 @@
                     </div>
                 </form>
             </div>
+            @if(isset($team))
+                <div class="row mt-3">
+                    <div class="col-md-6  col-xs-12">
+                        <div class="card">
+                            <div class="card-header font-weight-bold">
+                                Komandos priklausančios šiai komandai
+                            </div>
+                            <div class="card-body">
+                                <ul class="last-li-no-margin">
+                                    @forelse($team->relatedTeams as $relatedTeam)
+                                        <li>
+                                            <a href="{{ route('teams.edit', $relatedTeam->id) }}">{{ $relatedTeam->name }}</a>
+                                        </li>
+                                    @empty
+                                        <li>
+                                            Nėra įvesta šiai komandai priklausančių komandų.
+                                        </li>
+                                    @endforelse
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6  col-xs-12">
+                        <div class="card">
+                            <div class="card-header font-weight-bold">
+                                Komanda, kuriai priklauso ši komanda
+                            </div>
+                            <div class="card-body">
+                                <form method="post" action="{{ route('teams.belongs_to.update', $team->id) }}">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <select class="form-control form-control-sm" id="related_team_id" name="related_team_id">
+                                        <option value="" selected>...</option>
+                                        @foreach($teams as $tmpTeam)
+                                            <option value="{{ $tmpTeam->id }}"
+                                                    @if($team->belongsToTeam && $team->belongsToTeam->id == $tmpTeam->id) selected @endif>{{ $tmpTeam->name }}</option>
+                                        @endforeach
+                                    </select>
+                                    <button type="submit" class="btn btn-sm btn-block btn-success mt-3">IŠSAUGOTI</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 @endsection

@@ -30,5 +30,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin_access']], fu
         Route::resource('seasons', 'Admin\SeasonController');
         Route::resource('tournaments', 'Admin\TournamentController');
         Route::resource('teams', 'Admin\TeamController');
+        Route::post('teams/{id}/belongs-to-team', ['uses' => 'Admin\TeamController@updateTeamBelongsTo', 'as' => 'teams.belongs_to.update']);
     });
 });

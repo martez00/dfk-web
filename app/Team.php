@@ -8,6 +8,18 @@ use Illuminate\Support\Facades\File;
 class Team extends Model
 {
 
+    // when team belongs to any other team
+    public function belongsToTeam()
+    {
+        return $this->belongsTo('App\Team', 'related_team_id');
+    }
+
+    //when team has related teams
+    public function relatedTeams()
+    {
+        return $this->hasMany('App\Team', 'related_team_id');
+    }
+
     // --------------------------------- methods -----------------------------------------------------------------------
 
     public static function logoPath()
@@ -27,5 +39,13 @@ class Team extends Model
         } else {
             return url('images/uploads/teams/logos/no_logo.png');
         }
+    }
+
+    public function teamWithRelatedTeams() {
+        $teamsArr[] = $this;
+        foreach($this->relatedTeams as $relatedTeam) {
+            $teamsArr[] = $relatedTeam;
+        }
+        return $teamsArr;
     }
 }

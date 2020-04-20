@@ -12,6 +12,9 @@ body {
 .alert ul:last-child {
     margin-bottom: 0 !important;
 }
+.last-li-no-margin:last-child {
+    margin-bottom: 0 !important;
+}
 .table-td-vertical-middle td {
     vertical-align:middle !important;
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Team;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -13,7 +14,8 @@ class PageController extends Controller
 
     public function contacts()
     {
-        return view('pages.contacts');
+        $team = Team::find(mainTeamId());
+        return view('pages.contacts', compact('team'));
     }
 
     public function administration()

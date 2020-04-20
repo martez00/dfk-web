@@ -14,12 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        config(['global' => Setting::all(['name','value'])
-            ->keyBy('name')
-            ->transform(function ($setting) {
-                return $setting->value;
-            })->toArray()
-        ]);
+      
     }
 
     /**

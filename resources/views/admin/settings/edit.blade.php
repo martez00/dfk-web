@@ -13,13 +13,10 @@
                         <div class="form-group">
                             <label for="main_team">Pagrindinė komanda</label>
                             <select class="form-control form-control-sm" id="main_team" name="main_team">
-                                <option value="" selected>...</option>
-                                @if($teams)
-                                    @foreach($teams as $team)
-                                        <option value="{{ $team->id }}"
-                                                @if($mainTeamSetting->value == $team->id) selected @endif>{{ $team->name }}</option>
-                                    @endforeach
-                                @endif
+                                @foreach($teams as $team)
+                                    <option value="{{ $team->id }}"
+                                            @if($mainTeamSetting->value == $team->id) selected @endif>{{ $team->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

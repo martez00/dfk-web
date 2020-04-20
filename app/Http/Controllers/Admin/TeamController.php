@@ -34,6 +34,7 @@ class TeamController extends Controller
         $team->phone_number = $request->input('phone_number');
         $team->email = $request->input('email');
         $team->address = $request->input('address');
+        $team->website = $request->input('website');
         $team->save();
 
         if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
@@ -45,7 +46,8 @@ class TeamController extends Controller
 
     public function edit(Team $team)
     {
-        return view('admin.teams.createOrEdit', compact('team'));
+        $teams = Team::where('id', '!=', $team->id)->get();
+        return view('admin.teams.createOrEdit', compact('team', 'teams'));
     }
 
     public function update(Team $team, Request $request)
@@ -61,12 +63,20 @@ class TeamController extends Controller
         $team->phone_number = $request->input('phone_number');
         $team->email = $request->input('email');
         $team->address = $request->input('address');
+        $team->website = $request->input('website');
         $team->save();
 
         if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
             $request->file('logo')->move($team->logoPath(), $team->id);
         }
 
+        return redirect()->back()->with('success', 'Komanda sėkmingai atnaujinta.');
+    }
+
+    public function updateTeamBelongsTo($id, Request $request) {
+        $team = Team::findOrFail($id);
+        $team->related_team_id = $request->input('related_team_id');
+        $team->save();
         return redirect()->back()->with('success', 'Komanda sėkmingai atnaujinta.');
     }
 }

@@ -18,6 +18,10 @@ class SettingController extends Controller
 
     public function update(Request $request)
     {
+       $request->validate([
+            'main_team' => 'required'
+        ]);
+
         $mainTeamSetting = Setting::where('name', 'main_team')->first();
         $mainTeamSetting->value = $request->input('main_team');
         $mainTeamSetting->save();

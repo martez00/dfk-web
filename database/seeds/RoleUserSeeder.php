@@ -13,19 +13,29 @@ class RoleUserSeeder extends Seeder
      */
     public function run()
     {
-        $roleUserAdmin = new RoleUser();
-        $roleUserAdmin->role_id = Role::where('name', 'admin')->firstOrFail()->id;
-        $roleUserAdmin->user_id = 1;
-        $roleUserAdmin->save();
+        RoleUser::create([
+            'role_id' => Role::where('name', 'admin')->firstOrFail()->id,
+            'user_id' => 1
+        ]);
 
-        $roleUserEditor = new RoleUser();
-        $roleUserEditor->role_id = Role::where('name', 'editor')->firstOrFail()->id;
-        $roleUserEditor->user_id = 2;
-        $roleUserEditor->save();
+        RoleUser::create([
+            'role_id' => Role::where('name', 'editor')->firstOrFail()->id,
+            'user_id' => 1
+        ]);
 
-        $roleUserStatsAdmin = new RoleUser();
-        $roleUserStatsAdmin->role_id = Role::where('name', 'stats_admin')->firstOrFail()->id;
-        $roleUserStatsAdmin->user_id = 3;
-        $roleUserStatsAdmin->save();
+        RoleUser::create([
+            'role_id' => Role::where('name', 'stats_admin')->firstOrFail()->id,
+            'user_id' => 1
+        ]);
+
+        RoleUser::create([
+            'role_id' => Role::where('name', 'editor')->firstOrFail()->id,
+            'user_id' => 2
+        ]);
+
+        RoleUser::create([
+            'role_id' => Role::where('name', 'stats_admin')->firstOrFail()->id,
+            'user_id' => 3
+        ]);
     }
 }

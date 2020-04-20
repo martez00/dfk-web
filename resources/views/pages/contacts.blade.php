@@ -20,7 +20,7 @@
                             </div>
                             <div class="icon-text">
                                 <h3 class="icon-title">Telefonas</h3>
-                                <a class="icon-info" href="tel:+123456789">+370 612 61166</a>
+                                <a class="icon-info" @if($team->phone_number) href="tel:{{ $team->phone_number }}" @endif>{{ $team->phone_number ? $team->phone_number : '-' }}</a>
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                             </div>
                             <div class="icon-text">
                                 <h3 class="icon-title">El. paštas</h3>
-                                <a class="icon-info" href="mailto:dfkdainava@gmail.com">dfkdainava@gmail.com</a>
+                                <a class="icon-info" @if($team->phone_number) href="mailto:{{ $team->email }}" @endif>{{ $team->email ? $team->email : '-' }}</a>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                             </div>
                             <div class="icon-text">
                                 <h3 class="icon-title">Tinklalapis</h3>
-                                <span>http://www.dfkdainava.com</span>
+                                <span>{{ $team->website ? $team->website : '-' }}</span>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                             </div>
                             <div class="icon-text after-none">
                                 <h3 class="icon-title">Adresas</h3>
-                                <span>Alytus, LT-62137</span>
+                                <span>{{ $team->address ? $team->address : '-' }}</span>
                             </div>
                         </div>
                     </div>

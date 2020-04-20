@@ -14,7 +14,7 @@
             @endif
             <div class="card">
                 <div class="card-header font-weight-bold">
-                    Turnyrai
+                    Turnyras
                 </div>
                 <form method="POST" action="{{ $formUrl }}">
                     @isset($tournament)
