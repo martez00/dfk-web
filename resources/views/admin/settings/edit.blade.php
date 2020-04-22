@@ -19,6 +19,15 @@
                                 @endforeach
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="current_season">Dabartinis sezonas</label>
+                            <select class="form-control form-control-sm" id="current_season" name="current_season">
+                                @foreach($seasons as $season)
+                                    <option value="{{ $season->id }}"
+                                            @if($currentSeasonSetting->value == $season->id) selected @endif>{{ $season->title }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -25,6 +25,7 @@
     <link rel="stylesheet" type="text/css" href="{{ bustCache('css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ bustCache('css/rs-spaceing.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ bustCache('css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ bustCache('css/select2.min.css') }}">
     @yield('head')
 </head>
 
@@ -48,6 +49,12 @@
 <script src="{{ bustCache('js/waypoints.min.js') }}"></script>
 <script src="{{ bustCache('js/swiper.min.js') }}"></script>
 <script src="{{ bustCache('js/main.js') }}"></script>
+<script src="{{ bustCache('js/select2.min.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+</script>
 @yield('scripts')
 </body>
 

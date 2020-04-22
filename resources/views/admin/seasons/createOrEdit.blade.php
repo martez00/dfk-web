@@ -6,7 +6,9 @@
 
 @section('content')
     <div class="row">
-        @include('admin.partials.statsLinks')
+        <div class="col-sm-12 col-md-3 sidebar mb-3">
+            @include('admin.partials.statsLinks')
+        </div>
         <div class="col-sm-12 col-md-9">
             @if(isset($season))
                 <a class="btn btn-outline-primary btn-sm mb-3" href="{{ route('seasons.create') }}">Sukurti naują
@@ -62,18 +64,23 @@
                             </div>
                         </div>
                         <div class="row">
-                            @forelse($tournaments as $tournament)
-                                <div class="col-md-12">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="season_tournaments"
-                                               name="season_tournaments[{{ $tournament->id }}]" value="1"
-                                               @if (isset($assignedTourmanets) && in_array($tournament->id, $assignedTourmanets)) checked @endif>
-                                        <label class="form-check-label" for="season_tournaments">{{ $tournament->title }}</label>
+                            @foreach($teams as $team)
+                                <input type="hidden" name="teams[]" value="{{ $team->id }}">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <b><a href="{{ route('teams.edit', $team->id) }}">{{ $team->name }}</a></b>
                                     </div>
+                                    @foreach($tournaments as $tournament)
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="season_tournaments"
+                                                   name="season_tournaments[{{ $team->id }}][{{ $tournament->id }}]" value="1"
+                                                   @if (isset($assignedTournamentsToTeams[$team->id]) && in_array($tournament->id, $assignedTournamentsToTeams[$team->id])) checked @endif>
+                                            <label class="form-check-label"
+                                                   for="season_tournaments">{{ $tournament->title }}</label>
+                                        </div>
+                                    @endforeach
                                 </div>
-                            @empty
-
-                            @endforelse
+                            @endforeach
                         </div>
                     </div>
                     <div class="card-footer">

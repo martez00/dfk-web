@@ -1,5 +1,6 @@
 <?php
 
+use App\Season;
 use App\Setting;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +16,10 @@ class SettingSeeder extends Seeder
         Setting::create([
             'name' => 'main_team',
             'value' => 1
+        ]);
+        Setting::create([
+            'name' => 'current_season',
+            'value' => Season::orderBy('id', 'DESC')->first()->id
         ]);
     }
 }

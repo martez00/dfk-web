@@ -17,3 +17,8 @@ function mainTeamId() {
     $mainTeamSetting = Setting::where('name', 'main_team')->first();
     return (int) $mainTeamSetting->value;
 }
+
+function currentSeasonId() {
+    $currentSeasonSetting = Setting::where('name', 'current_season')->first();
+    return (int) $currentSeasonSetting->value;
+}

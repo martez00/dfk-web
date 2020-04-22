@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Season;
 use App\Setting;
 use App\Team;
 use Illuminate\Http\Request;
@@ -12,19 +13,25 @@ class SettingController extends Controller
     public function edit()
     {
         $mainTeamSetting = Setting::where('name', 'main_team')->first();
+        $currentSeasonSetting = Setting::where('name', 'current_season')->first();
         $teams = Team::all();
-        return view('admin.settings.edit', compact('mainTeamSetting', 'teams'));
+        $seasons = Season::all();
+        return view('admin.settings.edit', compact('mainTeamSetting', 'currentSeasonSetting', 'teams', 'seasons'));
     }
 
     public function update(Request $request)
     {
        $request->validate([
-            'main_team' => 'required'
+            'main_team' => 'required',
+            'current_season' => 'required'
         ]);
 
-        $mainTeamSetting = Setting::where('name', 'main_team')->first();
-        $mainTeamSetting->value = $request->input('main_team');
-        $mainTeamSetting->save();
+        $allSettings = Setting::all();
+        foreach($allSettings as $setting) {
+            $setting->value = $request->input($setting->name);
+            $setting->save();
+        }
+
         return redirect()->back()->with('success', 'Nustatymai sėkmingai atnaujinti.');
     }
 }

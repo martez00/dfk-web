@@ -6,7 +6,9 @@
 
 @section('content')
     <div class="row">
-        @include('admin.partials.statsLinks')
+        <div class="col-sm-12 col-md-3 sidebar mb-3">
+            @include('admin.partials.statsLinks')
+        </div>
         <div class="col-sm-12 col-md-9">
             @if(isset($tournament))
                 <a class="btn btn-sm btn-outline-primary mb-3" href="{{ route('tournaments.create') }}">Sukurti naują

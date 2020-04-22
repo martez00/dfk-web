@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
 
 class Team extends Model
 {
 
+    // --------------------------------- relationships -----------------------------------------------------------------
     // when team belongs to any other team
     public function belongsToTeam()
     {
@@ -18,6 +20,48 @@ class Team extends Model
     public function relatedTeams()
     {
         return $this->hasMany('App\Team', 'related_team_id');
+    }
+
+    // --------------------------------- relationships -----------------------------------------------------------------
+
+    public function seasonTournaments()
+    {
+        return $this->hasMany('App\SeasonTournament', 'team_id');
+    }
+
+    // --------------------------------- scopes ------------------------------------------------------------------------
+
+    public function scopeMainTeam($q) {
+        $q->where('id', mainTeamId());
+    }
+
+    public function scopeMainTeamOrRelatedToMainTeam($q) {
+        $q->where('id', mainTeamId())->orWhere('related_team_id', mainTeamId());
+    }
+
+    public function scopeSearchFilter($q)
+    {
+        if (Input::get('name')) {
+            $q->where('name', 'LIKE', '%' . Input::get('name') . '%');
+        }
+        if (Input::get('short_name')) {
+            $q->where('short_name', Input::get('short_name'));
+        }
+        if (Input::get('country')) {
+            $q->where('country', Input::get('country'));
+        }
+        if (Input::get('city')) {
+            $q->where('city', Input::get('city'));
+        }
+        if (Input::get('has_related_teams')) {
+            $q->whereHas('relatedTeams');
+        }
+        if (Input::get('is_related_to_other_team')) {
+            $q->whereNotNull('related_team_id');
+        }
+        if (Input::get('main_team')) {
+            $q->mainTeamOrRelatedToMainTeam();
+        }
     }
 
     // --------------------------------- methods -----------------------------------------------------------------------

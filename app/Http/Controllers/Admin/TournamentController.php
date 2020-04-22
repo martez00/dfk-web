@@ -10,7 +10,7 @@ class TournamentController extends Controller
 {
     public function index()
     {
-        $tournaments = Tournament::orderBy('id', 'DESC')->paginate(10);
+        $tournaments = Tournament::searchFilter()->orderBy('id', 'ASC')->paginate(10);
 
         return view('admin.tournaments.index', compact('tournaments'));
     }

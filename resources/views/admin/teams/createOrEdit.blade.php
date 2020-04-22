@@ -6,7 +6,9 @@
 
 @section('content')
     <div class="row">
-        @include('admin.partials.statsLinks')
+        <div class="col-sm-12 col-md-3 sidebar mb-3">
+            @include('admin.partials.statsLinks')
+        </div>
         <div class="col-sm-12 col-md-9">
             @if(isset($team))
                 <a class="btn btn-sm btn-outline-primary mb-3" href="{{ route('teams.create') }}">Sukurti naują
@@ -122,8 +124,8 @@
                 </form>
             </div>
             @if(isset($team))
-                <div class="row mt-3">
-                    <div class="col-md-6  col-xs-12">
+                <div class="row">
+                    <div class="col-md-6  col-xs-12 mt-3">
                         <div class="card">
                             <div class="card-header font-weight-bold">
                                 Komandos priklausančios šiai komandai
@@ -143,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6  col-xs-12">
+                    <div class="col-md-6  col-xs-12 mt-3">
                         <div class="card">
                             <div class="card-header font-weight-bold">
                                 Komanda, kuriai priklauso ši komanda
@@ -151,14 +153,14 @@
                             <div class="card-body">
                                 <form method="post" action="{{ route('teams.belongs_to.update', $team->id) }}">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <select class="form-control form-control-sm" id="related_team_id" name="related_team_id">
+                                    <select class="js-example-basic-single form-control form-control-sm" id="related_team_id" name="related_team_id">
                                         <option value="" selected>...</option>
                                         @foreach($teams as $tmpTeam)
                                             <option value="{{ $tmpTeam->id }}"
                                                     @if($team->belongsToTeam && $team->belongsToTeam->id == $tmpTeam->id) selected @endif>{{ $tmpTeam->name }}</option>
                                         @endforeach
                                     </select>
-                                    <button type="submit" class="btn btn-sm btn-block btn-success mt-3">IŠSAUGOTI</button>
+                                    <button type="submit" class="btn btn-sm btn-block btn-success mt-3">Išsaugoti</button>
                                 </form>
                             </div>
                         </div>

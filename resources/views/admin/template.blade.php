@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ bustCache('css/font-awesome.min.css') }}">
 
     <link href="{{ bustCache('css/admin/main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ bustCache('css/select2.min.css') }}">
 
     @yield('head')
 </head>
@@ -28,8 +29,12 @@
 
 <script src="{{ bustCache('js/jquery.min.js') }}"></script>
 <script src="{{ bustCache('js/bootstrap.min.js') }}"></script>
-
+<script src="{{ bustCache('js/select2.min.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+</script>
 @yield('scripts')
-
 </body>
 </html>

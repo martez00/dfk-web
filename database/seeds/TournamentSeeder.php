@@ -31,5 +31,9 @@ class TournamentSeeder extends Seeder
             'title' => 'LFF Taurė',
             'cup_tournament' => true
         ]);
+
+        Tournament::create([
+            'title' => 'Dublerių čempionatas'
+        ]);
     }
 }

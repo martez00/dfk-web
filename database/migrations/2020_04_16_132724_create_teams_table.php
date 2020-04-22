@@ -17,10 +17,10 @@ class CreateTeamsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('short_name', 5)->nullable();
-            $table->string('country', 30)->nullable();
-            $table->string('city', 30)->nullable();
+            $table->string('country', 50)->nullable();
+            $table->string('city', 50)->nullable();
             $table->string('phone_number', 20)->nullable();
-            $table->string('email', 50)->nullable();
+            $table->string('email', 100)->nullable();
             $table->string('address', 100)->nullable();
             $table->timestamps();
         });

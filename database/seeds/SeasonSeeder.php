@@ -13,7 +13,7 @@ class SeasonSeeder extends Seeder
      */
     public function run()
     {
-        $currentYear = new Carbon('2010-01-01');
+        $currentYear = new Carbon('2011-01-01');
         while($currentYear->year < 2021) {
             Season::create([
                 'title' => $currentYear->year . ' metų sezonas',
