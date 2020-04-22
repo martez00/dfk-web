@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SeasonTournamentsSeeder extends Seeder
+class SeasonTeamTournamentsSeeder extends Seeder
 {
 
     /**
@@ -14,9 +14,9 @@ class SeasonTournamentsSeeder extends Seeder
     {
         
 
-        \DB::table('season_tournaments')->delete();
+        \DB::table('season_team_tournaments')->delete();
         
-        \DB::table('season_tournaments')->insert(array (
+        \DB::table('season_team_tournaments')->insert(array (
             0 => 
             array (
                 'id' => 1,

@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TournamentSeeder::class);
         $this->call(TeamSeeder::class);
         $this->call(SettingSeeder::class);
-        $this->call(SeasonTournamentsSeeder::class);
+        $this->call(SeasonTeamTournamentsSeeder::class);
 
         Model::reguard();
     }

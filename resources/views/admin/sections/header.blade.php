@@ -43,6 +43,7 @@
                                 <a class="dropdown-item" href="{{ route('seasons.index') }}">Sezonai</a>
                                 <a class="dropdown-item" href="{{ route('tournaments.index') }}">Turnyrai</a>
                                 <a class="dropdown-item" href="{{ route('teams.index') }}">Komandos</a>
+                                <a class="dropdown-item" href="{{ route('players.index') }}">Žaidėjai</a>
                                 <a class="dropdown-item" href="#">Rungtynės</a>
                                 <a class="dropdown-item" href="#">Turnyro lentelės</a>
                             </div>

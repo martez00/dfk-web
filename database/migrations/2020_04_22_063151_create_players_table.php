@@ -21,10 +21,7 @@ class CreatePlayersTable extends Migration
             $table->date('birth_date')->nullable();
             $table->integer('height')->nullable();
             $table->string('country', 50)->nullable();
-            $table->unsignedInteger('team_id');
             $table->timestamps();
-
-            $table->foreign('team_id')->references('id')->on('teams');
         });
     }
 

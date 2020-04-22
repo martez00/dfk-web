@@ -19,6 +19,10 @@
        class="list-group-item @if(strpos(Route::currentRouteName(), 'teams.') !== false) active @endif">
         Komandos
     </a>
+    <a href="{{ route('players.index') }}"
+       class="list-group-item @if(strpos(Route::currentRouteName(), 'players.') !== false) active @endif">
+        Žaidėjai
+    </a>
     <a href="#" class="list-group-item">
         Rungtynės
     </a>

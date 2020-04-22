@@ -22,14 +22,14 @@ class Team extends Model
         return $this->hasMany('App\Team', 'related_team_id');
     }
 
-    public function players()
+    public function seasonsTournaments()
     {
-        return $this->hasMany('App\Player', 'team_id');
+        return $this->hasMany('App\SeasonTeamTournament', 'team_id');
     }
 
-    public function teamSeasonsTournaments()
+    public function seasonsPlayers()
     {
-        return $this->hasMany('App\SeasonTournament', 'team_id');
+        return $this->hasMany('App\SeasonTeamPlayer', 'team_id');
     }
 
     // --------------------------------- scopes ------------------------------------------------------------------------

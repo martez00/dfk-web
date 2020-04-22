@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSeasonTournamentsTable extends Migration
+class CreateSeasonTeamTournamentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateSeasonTournamentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('season_tournaments', function (Blueprint $table) {
+        Schema::create('season_team_tournaments', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('team_id');
             $table->unsignedInteger('season_id');

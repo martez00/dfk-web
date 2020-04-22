@@ -11,7 +11,7 @@ class Tournament extends Model
 
     public function seasonsTournaments()
     {
-        return $this->hasMany('App\SeasonTournament', 'tournament_id');
+        return $this->hasMany('App\SeasonTeamTournament', 'tournament_id');
     }
 
     // --------------------------------- scopes ------------------------------------------------------------------------
