@@ -22,9 +22,12 @@ class Team extends Model
         return $this->hasMany('App\Team', 'related_team_id');
     }
 
-    // --------------------------------- relationships -----------------------------------------------------------------
+    public function players()
+    {
+        return $this->hasMany('App\Player', 'team_id');
+    }
 
-    public function seasonTournaments()
+    public function teamSeasonsTournaments()
     {
         return $this->hasMany('App\SeasonTournament', 'team_id');
     }
@@ -81,6 +84,9 @@ class Team extends Model
         if($this->hasLogo()) {
             return url('images/uploads/teams/logos/' . $this->id);
         } else {
+            if($this->belongsToTeam && $this->belongsToTeam->hasLogo()) {
+                return url('images/uploads/teams/logos/' . $this->belongsToTeam->id);
+            }
             return url('images/uploads/teams/logos/no_logo.png');
         }
     }

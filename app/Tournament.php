@@ -9,7 +9,7 @@ class Tournament extends Model
 {
     // --------------------------------- relationships -----------------------------------------------------------------
 
-    public function seasonTournaments()
+    public function seasonsTournaments()
     {
         return $this->hasMany('App\SeasonTournament', 'tournament_id');
     }

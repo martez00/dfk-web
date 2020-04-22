@@ -22,8 +22,8 @@ class SeasonController extends Controller
 
         $assignedTournamentsToTeams = [];
         foreach($teams as $team) {
-            $teamSeasonTournaments = $currentSeason->seasonTournaments->where('team_id', $team->id);
-            foreach($teamSeasonTournaments as $teamSeasonTournament) {
+            $teamSeasonsTournaments = $currentSeason->seasonTournaments->where('team_id', $team->id);
+            foreach($teamSeasonsTournaments as $teamSeasonTournament) {
                 $assignedTournamentsToTeams[$team->id][] = $teamSeasonTournament->tournament_id;
             }
         }
@@ -51,15 +51,29 @@ class SeasonController extends Controller
         $season->end_date = $request->input('end_date');
         $season->save();
 
-        $seasonTournamentsIdsArr = [];
-        if($request->has('season_tournaments')) {
-            $seasonTournaments = $request->get('season_tournaments');
-            foreach($seasonTournaments as $seasonTournament => $checked) {
-                $seasonTournamentsIdsArr[$seasonTournament] = ['team_id' => mainTeamId()];
+        $teams = $request->input('teams');
+        $seasonTournaments = $request->input('season_tournaments');
+
+        foreach($teams as $teamId) {
+            $teamSeasonTournaments = [];
+            if(isset($seasonTournaments[$teamId])) {
+                foreach($seasonTournaments[$teamId] as $seasonTournamentId => $checked) {
+                    $teamSeasonTournaments[] = $seasonTournamentId;
+                }
+            }
+            if($teamSeasonTournaments) {
+                SeasonTournament::where('team_id', $teamId)->where('season_id', $season->id)->whereNotIn('tournament_id', $teamSeasonTournaments)->delete();
+                foreach($teamSeasonTournaments as $tournamentId) {
+                    SeasonTournament::firstOrCreate([
+                        'team_id' => $teamId,
+                        'tournament_id' => $tournamentId,
+                        'season_id' => $season->id
+                    ]);
+                }
+            } else {
+                SeasonTournament::where('team_id', $teamId)->where('season_id', $season->id)->delete();
             }
         }
-
-        $season->tournaments()->sync($seasonTournamentsIdsArr);
 
         return redirect()->route('seasons.edit', $season->id)->with('success', 'Sukurtas naujas sezonas.');
     }

@@ -8,6 +8,8 @@ class SeasonTournament extends Model
 {
     protected $fillable = ['team_id', 'season_id', 'tournament_id'];
 
+    // --------------------------------- relationships -----------------------------------------------------------------
+
     public function belongsToTeam()
     {
         return $this->belongsTo('App\Team', 'team_id');
