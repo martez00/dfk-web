@@ -18,14 +18,15 @@ class CreateMatchesTable extends Migration
             $table->unsignedInteger('team_id');
             $table->unsignedInteger('opponent_team_id');
             $table->enum('type',['home', 'away', 'neutral']);
-            $table->integer('team_score');
-            $table->integer('opponent_team_score');
+            $table->integer('team_score')->nullable();
+            $table->integer('opponent_team_score')->nullable();
             $table->unsignedInteger('season_id');
             $table->unsignedInteger('tournament_id');
             $table->string('location')->nullable();
             $table->date('date')->nullable();
             $table->time('time')->nullable();
             $table->integer('attendance')->nullable();
+            $table->boolean('finished')->default(false);
             $table->timestamps();
 
             $table->foreign('season_id')->references('id')->on('seasons');
