@@ -11,7 +11,7 @@
                 <form action="{{ route('teams.index') }}">
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="title">Pavadinimas</label>
+                            <label for="name">Pavadinimas</label>
                             <input type="text" class="form-control form-control-sm" id="name" name="name"
                                    value="{{ Request::input('name') }}">
                         </div>
@@ -46,7 +46,7 @@
                             <input type="checkbox" class="form-check-input" id="main_team"
                                    name="main_team" value="1"
                                    @if (Request::input('main_team')) checked @endif>
-                            <label class="form-check-label" for="main_team">Pagrindinė komanda (parinkta nustatymuose)</label>
+                            <label class="form-check-label" for="main_team">Nustatyta kaip pagrindinė</label>
                         </div>
                     </div>
                     <div class="card-footer">

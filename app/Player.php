@@ -38,6 +38,16 @@ class Player extends Model
         if (Input::get('position')) {
             $q->where('position', Input::get('position'));
         }
+        if (Input::get('team') || Input::get('season')) {
+            $q->whereHas('seasonsTeams', function ($seasonsTeams) {
+                if (Input::get('team')) {
+                    $seasonsTeams->where('team_id', Input::get('team'));
+                }
+                if (Input::get('season')) {
+                    $seasonsTeams->where('season_id', Input::get('season'));
+                }
+            });
+        }
     }
 
     // --------------------------------- methods -----------------------------------------------------------------------
@@ -65,7 +75,6 @@ class Player extends Model
     {
         $teams = $request->input('teams');
         $seasonsTeam = $request->input('seasons_teams');
-
         foreach ($teams as $team_id) {
             $playerPlayedForTeamInSeason = [];
             if (isset($seasonsTeam[$team_id])) {
@@ -77,11 +86,21 @@ class Player extends Model
                 SeasonTeamPlayer::where('team_id', $team_id)->where('player_id', $this->id)->whereNotIn('season_id',
                     $playerPlayedForTeamInSeason)->delete();
                 foreach ($playerPlayedForTeamInSeason as $season_id) {
-                    SeasonTeamPlayer::firstOrCreate([
-                        'player_id' => $this->id,
-                        'team_id' => $team_id,
-                        'season_id' => $season_id
-                    ]);
+                    $assignedTeamSeason = SeasonTeamPlayer::where('player_id', $this->id)->where('team_id',
+                        $team_id)->where('season_id', $season_id)->first();
+                    if ( ! $assignedTeamSeason) {
+                        $newTeamSeason = new SeasonTeamPlayer();
+                        $newTeamSeason->player_id = $this->id;
+                        $newTeamSeason->team_id = $team_id;
+                        $newTeamSeason->season_id = $season_id;
+                        $newTeamSeason->show_in_squad = true;
+                        $newTeamSeason->save();
+                    } else {
+                        if ($request->has('seasons_teams_show_in_squad') && (bool)$request->input('seasons_teams_show_in_squad')[$team_id][$season_id] != $assignedTeamSeason->show_in_squad) {
+                            $assignedTeamSeason->show_in_squad = (bool)$request->input('seasons_teams_show_in_squad')[$team_id][$season_id];
+                            $assignedTeamSeason->save();
+                        }
+                    }
                 }
             } else {
                 SeasonTeamPlayer::where('player_id', $this->id)->where('team_id', $team_id)->delete();

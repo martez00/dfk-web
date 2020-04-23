@@ -16,13 +16,13 @@
                                    value="{{ Request::input('name') }}">
                         </div>
                         <div class="form-group">
-                            <label for="level">Lygmuo</label>
+                            <label for="surname">Pavardė</label>
                             <input type="text" class="form-control form-control-sm" id="surname" name="surname"
                                    value="{{ Request::input('surname') }}">
                         </div>
-                        <div class="form-group mb-2">
+                        <div class="form-group">
                             <label for="position">Pozicija</label>
-                            <select class="form-control form-control-sm" id="position" name="position">
+                            <select class="js-example-basic-single form-control form-control-sm" id="position" name="position">
                                 <option value="" selected>...</option>
                                 <option value="goalkeeper"
                                         @if(Request::input('position') == 'goalkeeper') selected @endif>Vartininkas
@@ -36,6 +36,26 @@
                                 <option value="striker" @if(Request::input('position') == 'striker') selected @endif>
                                     Puolėjas
                                 </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="team">Komanda</label>
+                            <select class="js-example-basic-single form-control form-control-sm" id="team" name="team">
+                                <option value="" selected>...</option>
+                                @foreach($mainTeamWithRelatedTeams as $team)
+                                    <option value="{{ $team->id }}"
+                                            @if(Request::input('team') == $team->id) selected @endif>{{ $team->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="season">Sezonas</label>
+                            <select class="js-example-basic-single form-control form-control-sm" id="season" name="season">
+                                <option value="" selected>...</option>
+                                @foreach($seasons as $season)
+                                    <option value="{{ $season->id }}"
+                                            @if(Request::input('season') == $season->id) selected @endif>{{ $season->title }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -73,7 +93,7 @@
                                     <td>{{ $player->name . ' ' . $player->surname }}</td>
                                     <td>{{ $player->birth_date }}</td>
                                     <td>{{ __('main.' . $player->position) }}</td>
-                                    <td>
+                                    <td style="font-size: 10px;">
                                         @if(!$player->seasonsTeams->isEmpty())
                                             <ul class="last-li-no-margin">
                                                 @foreach($player->seasonsTeams()->orderBy('season_id', 'DESC')->get() as $seasonTeam)

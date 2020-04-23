@@ -28,11 +28,13 @@
 </div>
 
 <script src="{{ bustCache('js/jquery.min.js') }}"></script>
+<script src="{{ bustCache('js/popper.min.js') }}"></script>
 <script src="{{ bustCache('js/bootstrap.min.js') }}"></script>
 <script src="{{ bustCache('js/select2.min.js') }}"></script>
 <script>
     $(document).ready(function() {
         $('.js-example-basic-single').select2();
+        $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
 @yield('scripts')

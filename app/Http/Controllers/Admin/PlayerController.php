@@ -12,15 +12,17 @@ class PlayerController extends Controller
 {
     public function index()
     {
+        $seasons = Season::orderBy('start_date', 'DESC')->get();
+        $mainTeamWithRelatedTeams = Team::mainTeamOrRelatedToMainTeam()->get();
         $players = Player::searchFilter()->orderBy('id', 'ASC')->paginate(30);
 
-        return view('admin.players.index', compact('players'));
+        return view('admin.players.index', compact('players', 'mainTeamWithRelatedTeams', 'seasons'));
     }
 
     public function create()
     {
         $teams = Team::mainTeamOrRelatedToMainTeam()->get();
-        $seasons = Season::all();
+        $seasons = Season::orderBy('start_date', 'DESC')->get();
 
         return view('admin.players.createOrEdit', compact('teams', 'seasons'));
     }
@@ -29,8 +31,7 @@ class PlayerController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'surname' => 'required|string',
-            'position' => 'required|in:goalkeeper,defender,midfielder,striker'
+            'surname' => 'required|string'
         ]);
 
         $player = new Player();
@@ -54,13 +55,13 @@ class PlayerController extends Controller
     public function edit(Player $player)
     {
         $teams = Team::mainTeamOrRelatedToMainTeam()->get();
-        $seasons = Season::all();
+        $seasons = Season::orderBy('start_date', 'DESC')->get();
 
         $assignedSeasonsTeams = [];
         foreach ($teams as $team) {
             $playerPlayedForTeamInSeason = $player->seasonsTeams->where('team_id', $team->id);
             foreach ($playerPlayedForTeamInSeason as $playerTeamSeason) {
-                $assignedSeasonsTeams[$team->id][] = $playerTeamSeason->season_id;
+                $assignedSeasonsTeams[$team->id][$playerTeamSeason->season_id] = $playerTeamSeason->show_in_squad;
             }
         }
 
@@ -71,8 +72,7 @@ class PlayerController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-            'surname' => 'required|string',
-            'position' => 'required|in:goalkeeper,defender,midfielder,striker'
+            'surname' => 'required|string'
         ]);
 
         $player->name = $request->input('name');

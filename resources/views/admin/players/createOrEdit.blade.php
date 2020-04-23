@@ -18,7 +18,7 @@
                 <div class="card-header font-weight-bold">
                     Žaidėjas
                 </div>
-                <form method="POST" action="{{ $formUrl }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ $formUrl }}" id="player-form" enctype="multipart/form-data">
                     @isset($player)
                         <input type="hidden" name="_method" value="PUT">
                     @endif
@@ -68,12 +68,24 @@
                             <div class="col-md-3 col-xs-12">
                                 <div class="form-group">
                                     <label for="position">Pozicija</label>
-                                    <select class="form-control form-control-sm" id="position" name="position">
+                                    <select class="js-example-basic-single form-control form-control-sm" id="position" name="position">
                                         <option value="" selected>...</option>
-                                        <option value="goalkeeper" @if(isset($player) && $player->position == 'goalkeeper') selected @endif>Vartininkas</option>
-                                        <option value="defender" @if(isset($player) && $player->position == 'defender') selected @endif>Gynėjas</option>
-                                        <option value="midfielder" @if(isset($player) && $player->position == 'midfielder') selected @endif>Saugas</option>
-                                        <option value="striker" @if(isset($player) && $player->position == 'striker') selected @endif>Puolėjas</option>
+                                        <option value="goalkeeper"
+                                                @if(isset($player) && $player->position == 'goalkeeper') selected @endif>
+                                            Vartininkas
+                                        </option>
+                                        <option value="defender"
+                                                @if(isset($player) && $player->position == 'defender') selected @endif>
+                                            Gynėjas
+                                        </option>
+                                        <option value="midfielder"
+                                                @if(isset($player) && $player->position == 'midfielder') selected @endif>
+                                            Saugas
+                                        </option>
+                                        <option value="striker"
+                                                @if(isset($player) && $player->position == 'striker') selected @endif>
+                                            Puolėjas
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -87,7 +99,8 @@
                             <div class="col-md-3 col-xs-12">
                                 <div class="form-group">
                                     <label for="birth_date">Gimimo data</label>
-                                    <input type="date" class="form-control form-control-sm" id="birth_date" name="birth_date"
+                                    <input type="date" class="form-control form-control-sm" id="birth_date"
+                                           name="birth_date"
                                            value="{{ isset($player) ? $player->birth_date : old('birth_date') }}">
                                 </div>
                             </div>
@@ -113,11 +126,24 @@
                                     </div>
                                     @foreach($seasons as $season)
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="seasons_teams_{{ $team->id . $season->id }}"
+                                            <input type="checkbox" class="form-check-input"
+                                                   id="seasons_teams_{{ $team->id . $season->id }}"
                                                    name="seasons_teams[{{ $team->id }}][{{ $season->id }}]" value="1"
-                                                   @if (isset($assignedSeasonsTeams[$team->id]) && in_array($season->id, $assignedSeasonsTeams[$team->id])) checked @endif>
+                                                   @if (isset($assignedSeasonsTeams[$team->id][$season->id])) checked @endif>
                                             <label class="form-check-label"
                                                    for="seasons_teams_{{ $team->id . $season->id }}">{{ $season->title }}</label>
+                                            @if(isset($assignedSeasonsTeams[$team->id][$season->id]))
+                                                <input type="hidden"
+                                                       class="visibleHiddenInSquadInput"
+                                                       name="seasons_teams_show_in_squad[{{ $team->id }}][{{ $season->id }}]"
+                                                       value="{{ $assignedSeasonsTeams[$team->id][$season->id] }}">
+                                                <img data-toggle="tooltip"
+                                                     data-placement="right" data-html="true"
+                                                     class="visibleHiddenInSquad"
+                                                     title="@if($assignedSeasonsTeams[$team->id][$season->id]) Žaidėjas rodomas to sezono sudėtyje. @else Žaidėjas nerodomas to sezono sudėtyje. @endif<br><b>Jeigu norite pakeisti šį nustatymą spauskite ant šio mygtuko.</b>"
+                                                     src="{{ asset('images/icons/' . ($assignedSeasonsTeams[$team->id][$season->id] ? 'visible.png' : 'hidden.png')) }}"
+                                                     style="max-height: 11px;">
+                                            @endif
                                         </div>
                                     @endforeach
                                 </div>
@@ -131,4 +157,18 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $('.visibleHiddenInSquad').on('click', function() {
+            let closestInput = $(this).prev('.visibleHiddenInSquadInput');
+            if(closestInput.val() == 1) {
+                closestInput.val(0);
+            } else {
+                closestInput.val(1);
+            }
+            $('#player-form').submit();
+        });
+    </script>
 @endsection

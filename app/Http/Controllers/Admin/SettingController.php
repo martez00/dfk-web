@@ -15,7 +15,7 @@ class SettingController extends Controller
         $mainTeamSetting = Setting::where('name', 'main_team')->first();
         $currentSeasonSetting = Setting::where('name', 'current_season')->first();
         $teams = Team::all();
-        $seasons = Season::all();
+        $seasons = Season::orderBy('start_date', 'DESC')->get();
         return view('admin.settings.edit', compact('mainTeamSetting', 'currentSeasonSetting', 'teams', 'seasons'));
     }
 
