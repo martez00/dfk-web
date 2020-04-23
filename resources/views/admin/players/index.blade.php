@@ -22,7 +22,7 @@
                         </div>
                         <div class="form-group">
                             <label for="position">Pozicija</label>
-                            <select class="js-example-basic-single form-control form-control-sm" id="position" name="position">
+                            <select class="single-select-with-typing form-control form-control-sm" id="position" name="position">
                                 <option value="" selected>...</option>
                                 <option value="goalkeeper"
                                         @if(Request::input('position') == 'goalkeeper') selected @endif>Vartininkas
@@ -40,7 +40,7 @@
                         </div>
                         <div class="form-group">
                             <label for="team">Komanda</label>
-                            <select class="js-example-basic-single form-control form-control-sm" id="team" name="team">
+                            <select class="single-select-with-typing form-control form-control-sm" id="team" name="team">
                                 <option value="" selected>...</option>
                                 @foreach($mainTeamWithRelatedTeams as $team)
                                     <option value="{{ $team->id }}"
@@ -50,7 +50,7 @@
                         </div>
                         <div class="form-group">
                             <label for="season">Sezonas</label>
-                            <select class="js-example-basic-single form-control form-control-sm" id="season" name="season">
+                            <select class="single-select-with-typing form-control form-control-sm" id="season" name="season">
                                 <option value="" selected>...</option>
                                 @foreach($seasons as $season)
                                     <option value="{{ $season->id }}"
@@ -82,7 +82,6 @@
                                 <th scope="col">Vardas Pavardė</th>
                                 <th scope="col">Gimimo data</th>
                                 <th scope="col">Pozicija</th>
-                                <th scope="col">Sezonai</th>
                                 <th scope="col"></th>
                             </tr>
                             </thead>
@@ -93,18 +92,6 @@
                                     <td>{{ $player->name . ' ' . $player->surname }}</td>
                                     <td>{{ $player->birth_date }}</td>
                                     <td>{{ __('main.' . $player->position) }}</td>
-                                    <td style="font-size: 10px;">
-                                        @if(!$player->seasonsTeams->isEmpty())
-                                            <ul class="last-li-no-margin">
-                                                @foreach($player->seasonsTeams()->orderBy('season_id', 'DESC')->get() as $seasonTeam)
-                                                    <li>{{ $seasonTeam->season->title }}
-                                                        – {{ $seasonTeam->team->name }}</li>
-                                                @endforeach
-                                            </ul>
-                                        @else
-                                            -
-                                        @endif
-                                    </td>
                                     <td class="text-right"><a class="btn btn-sm btn-warning"
                                                               href="{{ route('players.edit', $player->id) }}">Redaguoti</a>
                                     </td>

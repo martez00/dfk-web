@@ -52,7 +52,7 @@
 <script src="{{ bustCache('js/select2.min.js') }}"></script>
 <script>
     $(document).ready(function() {
-        $('.js-example-basic-single').select2();
+        $('[class^=single-select-with-typing]').select2();
     });
 </script>
 @yield('scripts')

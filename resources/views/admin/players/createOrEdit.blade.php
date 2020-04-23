@@ -68,7 +68,7 @@
                             <div class="col-md-3 col-xs-12">
                                 <div class="form-group">
                                     <label for="position">Pozicija</label>
-                                    <select class="js-example-basic-single form-control form-control-sm" id="position" name="position">
+                                    <select class="single-select-with-typing form-control form-control-sm" id="position" name="position">
                                         <option value="" selected>...</option>
                                         <option value="goalkeeper"
                                                 @if(isset($player) && $player->position == 'goalkeeper') selected @endif>

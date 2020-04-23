@@ -32,5 +32,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin_access']], fu
         Route::resource('teams', 'Admin\TeamController', ['only' => ['index', 'create', 'edit', 'store', 'update']]);
         Route::post('teams/{team_id}/belongs-to-team', ['uses' => 'Admin\TeamController@updateTeamBelongsTo', 'as' => 'teams.belongs_to.update']);
         Route::resource('players', 'Admin\PlayerController', ['only' => ['index', 'create', 'store', 'edit', 'update']]);
+        Route::get('matches', ['uses' => 'Admin\MatchController@index', 'as' => 'matches.index']);
     });
 });

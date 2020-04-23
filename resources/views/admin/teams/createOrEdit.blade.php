@@ -153,7 +153,7 @@
                             <div class="card-body">
                                 <form method="post" action="{{ route('teams.belongs_to.update', $team->id) }}">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <select class="js-example-basic-single form-control form-control-sm" id="related_team_id" name="related_team_id">
+                                    <select class="single-select-with-typing form-control form-control-sm" id="related_team_id" name="related_team_id">
                                         <option value="" selected>...</option>
                                         @foreach($teams as $tmpTeam)
                                             <option value="{{ $tmpTeam->id }}"

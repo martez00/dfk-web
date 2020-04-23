@@ -22,7 +22,6 @@ class CreateSeasonTeamTournamentsTable extends Migration
             $table->foreign('team_id')->references('id')->on('teams');
             $table->foreign('season_id')->references('id')->on('seasons');
             $table->foreign('tournament_id')->references('id')->on('tournaments');
-            $table->timestamps();
         });
     }
 

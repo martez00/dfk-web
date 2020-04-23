@@ -35,5 +35,9 @@ class TournamentSeeder extends Seeder
         Tournament::create([
             'title' => 'Dublerių čempionatas'
         ]);
+
+        Tournament::create([
+            'title' => 'Draugiškos rungtynės'
+        ]);
     }
 }

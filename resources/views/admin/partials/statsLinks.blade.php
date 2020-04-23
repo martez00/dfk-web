@@ -23,8 +23,9 @@
        class="list-group-item @if(strpos(Route::currentRouteName(), 'players.') !== false) active @endif">
         Žaidėjai
     </a>
-    <a href="#" class="list-group-item">
-        Rungtynės
+    <a href="{{ route('matches.index') }}"
+       class="list-group-item @if(strpos(Route::currentRouteName(), 'matches.') !== false) active @endif">
+    Rungtynės
     </a>
     <a href="#" class="list-group-item">
         Turnyro lentelė

@@ -32,6 +32,21 @@ class Team extends Model
         return $this->hasMany('App\SeasonTeamPlayer', 'team_id');
     }
 
+    public function matches()
+    {
+        return $this->hasMany('App\Match', 'team_id');
+    }
+
+    public function matchesAsOpponent()
+    {
+        return $this->hasMany('App\Match', 'opponent_team_id');
+    }
+
+    public function matchesEvents()
+    {
+        return $this->hasMany('App\MatchEvent', 'team_id');
+    }
+
     // --------------------------------- scopes ------------------------------------------------------------------------
 
     public function scopeMainTeam($q) {

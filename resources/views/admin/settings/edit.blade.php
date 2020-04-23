@@ -12,7 +12,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="main_team">Pagrindinė komanda</label>
-                            <select class="js-example-basic-single form-control form-control-sm" id="main_team" name="main_team">
+                            <select class="single-select-with-typing form-control form-control-sm" id="main_team" name="main_team">
                                 @foreach($teams as $team)
                                     <option value="{{ $team->id }}"
                                             @if($mainTeamSetting->value == $team->id) selected @endif>{{ $team->name }}</option>
@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group">
                             <label for="current_season">Dabartinis sezonas</label>
-                            <select class="js-example-basic-single form-control form-control-sm" id="current_season" name="current_season">
+                            <select class="single-select-with-typing form-control form-control-sm" id="current_season" name="current_season">
                                 @foreach($seasons as $season)
                                     <option value="{{ $season->id }}"
                                             @if($currentSeasonSetting->value == $season->id) selected @endif>{{ $season->title }}</option>

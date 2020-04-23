@@ -19,6 +19,11 @@ class Season extends Model
         return $this->hasMany('App\SeasonTeamPlayer', 'season_id');
     }
 
+    public function matches()
+    {
+        return $this->hasMany('App\Match', 'season_id');
+    }
+
     // --------------------------------- scopes ------------------------------------------------------------------------
 
     public function scopeSearchFilter($q)

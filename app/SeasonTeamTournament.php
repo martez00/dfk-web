@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class SeasonTeamTournament extends Model
 {
     protected $fillable = ['team_id', 'season_id', 'tournament_id'];
+    public $timestamps = false;
 
     // --------------------------------- relationships -----------------------------------------------------------------
 
