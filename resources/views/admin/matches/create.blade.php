@@ -6,7 +6,7 @@
             @include('admin.partials.statsLinks')
         </div>
         <div class="col-sm-12 col-md-9">
-            <form method="POST" action="{{ route('matches.store') }}">
+            <form method="POST" action="{{ route('matches.store', ['team_id' => $team->id, 'season_id' => $season->id, 'tournament_id' => $tournament->id]) }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="card">
                     <div class="card-header font-weight-bold">

@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Input;
 
 class Tournament extends Model
 {
+    protected $fillable = ['title'];
+
     // --------------------------------- relationships -----------------------------------------------------------------
 
     public function seasonsTournaments()

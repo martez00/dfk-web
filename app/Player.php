@@ -55,6 +55,13 @@ class Player extends Model
         }
     }
 
+    public function scopeSeasonTeamFilter($q, $team_id, $season_id)
+    {
+        $q->whereHas('seasonsTeams', function($seasonsTeams) use($team_id, $season_id) {
+            $seasonsTeams->where('team_id', $team_id)->where('season_id', $season_id);
+        });
+    }
+
     // --------------------------------- methods -----------------------------------------------------------------------
 
     public function photoUrl()

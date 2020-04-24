@@ -139,6 +139,23 @@
                     </div>
                 </div>
             </form>
+            <div class="row">
+                @if(in_array($match->type, ['home', 'neutral']))
+                    <div class="col-md-6">
+                        @include('admin.matches.partials.matchTeamPlayers', ['team' => $match->team, 'players' => $allPlayersForMainTeam, 'assignedPlayers' => $assignedPlayersForMainTeam])
+                    </div>
+                    <div class="col-md-6">
+                        @include('admin.matches.partials.matchTeamPlayers', ['team' => $match->opponentTeam, 'players' => $allPlayersForOpponentTeam, 'assignedPlayers' => $assignedPlayersForOpponentTeam])
+                    </div>
+                @else
+                    <div class="col-md-6">
+                        @include('admin.matches.partials.matchTeamPlayers', ['team' => $match->opponentTeam, 'players' => $allPlayersForOpponentTeam, 'assignedPlayers' => $assignedPlayersForOpponentTeam])
+                    </div>
+                    <div class="col-md-6">
+                        @include('admin.matches.partials.matchTeamPlayers', ['team' => $match->team, 'players' => $allPlayersForMainTeam, 'assignedPlayers' => $assignedPlayersForMainTeam])
+                    </div>
+                @endif
+            </div>
         </div>
     </div>
 @endsection

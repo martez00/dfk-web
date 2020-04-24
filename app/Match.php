@@ -33,6 +33,11 @@ class Match extends Model
         return $this->hasMany('App\MatchEvent', 'match_id');
     }
 
+    public function players()
+    {
+        return $this->hasMany('App\MatchPlayer', 'match_id')->orderBy('starting_lineup', 'DESC');
+    }
+
     // --------------------------------- scopes ------------------------------------------------------------------------
 
     public function scopeMainTeamMatches($q)

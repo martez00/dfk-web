@@ -61,5 +61,6 @@ class Kernel extends HttpKernel
         'editor' => \App\Http\Middleware\Editor::class,
         'stats_admin' => \App\Http\Middleware\StatsAdmin::class,
         'admin_access' => \App\Http\Middleware\AdminAccess::class,
+        'season_tournament_belongs_to_team' => \App\Http\Middleware\SeasonTournamentBelongsToTeam::class,
     ];
 }

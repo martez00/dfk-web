@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 //admin
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin_access']], function () {
+    Route::get('/test', ['uses' => 'Admin\AdminPageController@test']);
     Route::get('/', ['uses' => 'Admin\AdminPageController@index', 'as' => 'admin.index']);
 
     Route::group(['middleware' => ['admin']], function () {
@@ -32,7 +33,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin_access']], fu
         Route::resource('teams', 'Admin\TeamController', ['only' => ['index', 'create', 'edit', 'store', 'update']]);
         Route::post('teams/{team_id}/belongs-to-team', ['uses' => 'Admin\TeamController@updateTeamBelongsTo', 'as' => 'teams.belongs_to.update']);
         Route::resource('players', 'Admin\PlayerController', ['only' => ['index', 'create', 'store', 'edit', 'update']]);
-        Route::resource('matches', 'Admin\MatchController', ['only' => ['index', 'store', 'edit', 'update', 'delete']]);
-        Route::get('team/{team_id}/{season_id}/{tournament_id}/matches/create', ['uses' => 'Admin\MatchController@create', 'as' => 'matches.create']);
+        Route::resource('matches', 'Admin\MatchController', ['only' => ['index', 'edit', 'update', 'delete']]);
+
+        Route::group(['middleware' => ['season_tournament_belongs_to_team']], function () {
+            Route::get('team/{team_id}/{season_id}/{tournament_id}/matches/create', ['uses' => 'Admin\MatchController@create', 'as' => 'matches.create']);
+            Route::post('team/{team_id}/{season_id}/{tournament_id}/matches/store', ['uses' => 'Admin\MatchController@store', 'as' => 'matches.store']);
+        });
+
+        Route::resource('matches/{match_id}/match-player', 'Admin\MatchPlayerController', ['only' => ['destroy', 'store'], 'names' => ['store' => 'match_player.store', 'destroy' => 'match_player.destroy']]);
+        Route::resource('matches/{match_id}/match-event', 'Admin\MatchEventController', ['only' => ['destroy', 'store']]);
     });
 });
