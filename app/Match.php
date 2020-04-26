@@ -72,6 +72,10 @@ class Match extends Model
         }
     }
 
+    public function scopeFinished($q) {
+        $q->where('finished', true)->whereNotNull('team_score')->whereNotNull('opponent_team_score');
+    }
+
     // --------------------------------- methods -----------------------------------------------------------------------
 
     public function matchResultType() {
