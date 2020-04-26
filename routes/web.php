@@ -40,6 +40,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin_access']], fu
         });
 
         Route::resource('matches/{match_id}/match-player', 'Admin\MatchPlayerController', ['only' => ['destroy', 'store'], 'names' => ['store' => 'match_player.store', 'destroy' => 'match_player.destroy']]);
-        Route::resource('matches/{match_id}/match-event', 'Admin\MatchEventController', ['only' => ['destroy', 'store']]);
+        Route::resource('matches/{match_id}/match-event', 'Admin\MatchEventController', ['only' => ['destroy', 'store'], 'names' => ['store' => 'match_event.store', 'destroy' => 'match_event.destroy']]);
     });
 });

@@ -3,9 +3,16 @@
         {{ $team->name }} įvykiai
     </div>
     <div class="card-body">
+        @if(count($players))
+            @include('admin.matches.partials.createEvent', ['team_id' => $team->id, 'players' => $players])
+        @else
+            <div class="alert alert-danger" style="margin-bottom: 0;">
+                Neįvesta komandos sudėtis rungtynėms, todėl negalite priskirti įvykių.
+            </div>
+        @endif
         <div class="row mt-3">
             <div class="col-md-12">
-                <div class="table-responsive">
+                <div class="table-responsive mt-3">
                     <table class="table table-striped table-td-vertical-middle">
                         <thead>
                         <tr>
@@ -22,12 +29,17 @@
                                 <td>{{ $event->type }}</td>
                                 <td>{{ $event->minute }}</td>
                                 <td class="text-right">
-                                    <button class="btn btn-sm btn-danger">Ištrinti</button>
+                                    <form method="POST"
+                                          action="{{ route('match_event.destroy', ['match_id' => $match->id, 'match_event' => $event->id]) }}">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button class="btn btn-sm btn-danger">Ištrinti</button>
+                                    </form>
                                 </td>
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="3">
+                                <td colspan="4">
                                     <div class="alert alert-warning" style="margin-bottom: 0;">
                                         Įvykiai neįvesti.
                                     </div>

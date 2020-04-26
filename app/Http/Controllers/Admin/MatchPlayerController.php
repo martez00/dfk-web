@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Match;
+use App\MatchEvent;
 use App\MatchPlayer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -44,7 +45,9 @@ class MatchPlayerController extends Controller
      */
 
     public function destroy($match_id, MatchPlayer $matchPlayer) {
+        $player_id = $matchPlayer->player_id;
         $matchPlayer->delete();
+        MatchEvent::where('player_id', $player_id)->where('match_id', $match_id)->delete();
         return redirect()->back()->with('success', 'Žaidėjas sėkmingai ištrintas.');
     }
 }

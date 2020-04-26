@@ -26,7 +26,7 @@
                 </div>
             </form>
         @else
-            <div class="alert alert-danger mb-0">Nėra sukurta nei vieno žaidėjo, kurį būtų galima priskirti.</div>
+            <div class="alert alert-danger mb-0">Nėra sukurta nei vieno žaidėjo, kurį būtų galima priskirti. Jeigu žaidėjas pagrindinės sistemos komandos, prie jo turi būti pažymėta, jog jis žaidžia šiame sezone.</div>
         @endif
         <div class="row mt-3">
             <div class="col-md-12">

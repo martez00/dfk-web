@@ -159,17 +159,17 @@
             <div class="row">
                 @if(in_array($match->type, ['home', 'neutral']))
                     <div class="col-md-6">
-                        @include('admin.matches.partials.matchTeamEvents', ['team' => $match->team, 'players' => $allPlayersForMainTeam, 'events' => $assignedEventsForMainTeam])
+                        @include('admin.matches.partials.matchTeamEvents', ['team' => $match->team, 'players' => $assignedPlayersForMainTeam, 'events' => $assignedEventsForMainTeam])
                     </div>
                     <div class="col-md-6">
-                        @include('admin.matches.partials.matchTeamEvents', ['team' => $match->opponentTeam, 'players' => $allPlayersForOpponentTeam, 'events' => $assignedEventsForOpponentTeam])
+                        @include('admin.matches.partials.matchTeamEvents', ['team' => $match->opponentTeam, 'players' => $assignedPlayersForOpponentTeam, 'events' => $assignedEventsForOpponentTeam])
                     </div>
                 @else
                     <div class="col-md-6">
-                        @include('admin.matches.partials.matchTeamEvents', ['team' => $match->opponentTeam, 'players' => $allPlayersForOpponentTeam, 'events' => $assignedEventsForOpponentTeam])
+                        @include('admin.matches.partials.matchTeamEvents', ['team' => $match->opponentTeam, 'players' => $assignedPlayersForOpponentTeam, 'events' => $assignedEventsForOpponentTeam])
                     </div>
                     <div class="col-md-6">
-                        @include('admin.matches.partials.matchTeamEvents', ['team' => $match->team, 'players' => $allPlayersForMainTeam, 'events' => $assignedEventsForMainTeam])
+                        @include('admin.matches.partials.matchTeamEvents', ['team' => $match->team, 'players' => $assignedPlayersForMainTeam, 'events' => $assignedEventsForMainTeam])
                     </div>
                 @endif
             </div>
