@@ -145,7 +145,7 @@
                             </tbody>
                         </table>
                     </div>
-                    {{ $seasons->render("pagination::bootstrap-4") }}
+                    {{ $seasons->appends(request()->input())->links("pagination::bootstrap-4") }}
                 </div>
             </div>
         </div>

@@ -73,7 +73,7 @@
                                     @foreach($tournaments as $tournament)
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input" id="season_tournaments_{{ $team->id . $tournament->id }}"
-                                                   name="seasons_team[{{ $team->id }}][{{ $tournament->id }}]" value="1"
+                                                   name="season_tournaments[{{ $team->id }}][{{ $tournament->id }}]" value="1"
                                                    @if (isset($assignedTournamentsToTeams[$team->id]) && in_array($tournament->id, $assignedTournamentsToTeams[$team->id])) checked @endif>
                                             <label class="form-check-label"
                                                    for="season_tournaments_{{ $team->id . $tournament->id }}">{{ $tournament->title }}</label>

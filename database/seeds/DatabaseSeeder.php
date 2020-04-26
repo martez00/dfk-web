@@ -14,14 +14,19 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(UserSeeder::class);
-        $this->call(RoleSeeder::class);
-        $this->call(RoleUserSeeder::class);
-        $this->call(SeasonSeeder::class);
-        $this->call(TournamentSeeder::class);
-        $this->call(TeamSeeder::class);
-        $this->call(SettingSeeder::class);
-        $this->call(SeasonTeamTournamentsSeeder::class);
+        $this->call(UsersTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(RoleUsersTableSeeder::class);
+        $this->call(SeasonsTableSeeder::class);
+        $this->call(TournamentsTableSeeder::class);
+        $this->call(TeamsTableSeeder::class);
+        $this->call(SettingsTableSeeder::class);
+        $this->call(SeasonTeamTournamentsTableSeeder::class);
+        $this->call(PlayersTableSeeder::class);
+        $this->call(SeasonTeamPlayersTableSeeder::class);
+        $this->call(MatchesTableSeeder::class);
+        $this->call(MatchPlayersTableSeeder::class);
+        $this->call(MatchEventsTableSeeder::class);
 
         Model::reguard();
     }

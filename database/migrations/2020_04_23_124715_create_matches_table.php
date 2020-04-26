@@ -23,6 +23,11 @@ class CreateMatchesTable extends Migration
             $table->unsignedInteger('season_id');
             $table->unsignedInteger('tournament_id');
             $table->string('location')->nullable();
+            $table->string('referee', 60)->nullable();
+            $table->string('referee2', 60)->nullable();
+            $table->string('referee3', 60)->nullable();
+            $table->string('referee4', 60)->nullable();
+            $table->string('referee_observer', 60)->nullable();
             $table->date('date')->nullable();
             $table->time('time')->nullable();
             $table->integer('attendance')->nullable();

@@ -40,7 +40,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse($match->players()->where('team_id', $team->id)->get() as $matchPlayer)
+                        @forelse($assignedPlayers as $matchPlayer)
                             <tr>
                                 <td>{{ $matchPlayer->player->name . ' ' . $matchPlayer->player->surname }}</td>
                                 <td class="font-weight-bold">{{ $matchPlayer->starting_lineup ? 'TAIP' : 'NE' }}</td>

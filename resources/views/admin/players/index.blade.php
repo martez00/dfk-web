@@ -82,6 +82,7 @@
                                 <th scope="col">Vardas Pavardė</th>
                                 <th scope="col">Gimimo data</th>
                                 <th scope="col">Pozicija</th>
+                                <th scope="col">Šalis</th>
                                 <th scope="col"></th>
                             </tr>
                             </thead>
@@ -92,6 +93,7 @@
                                     <td>{{ $player->name . ' ' . $player->surname }}</td>
                                     <td>{{ $player->birth_date }}</td>
                                     <td>{{ __('main.' . $player->position) }}</td>
+                                    <td>{{ $player->country }}</td>
                                     <td class="text-right"><a class="btn btn-sm btn-warning"
                                                               href="{{ route('players.edit', $player->id) }}">Redaguoti</a>
                                     </td>
@@ -108,7 +110,7 @@
                             </tbody>
                         </table>
                     </div>
-                    {{ $players->render("pagination::bootstrap-4") }}
+                    {{ $players->appends(request()->input())->links("pagination::bootstrap-4") }}
                 </div>
             </div>
         </div>

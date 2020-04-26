@@ -100,7 +100,7 @@
                             </tbody>
                         </table>
                     </div>
-                    {{ $teams->render("pagination::bootstrap-4") }}
+                    {{ $teams->appends(request()->input())->links("pagination::bootstrap-4") }}
                 </div>
             </div>
         </div>

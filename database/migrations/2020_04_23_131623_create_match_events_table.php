@@ -18,8 +18,8 @@ class CreateMatchEventsTable extends Migration
             $table->unsignedInteger('match_id');
             $table->unsignedInteger('team_id');
             $table->unsignedInteger('player_id');
-            $table->enum('type',['goal', 'own_goal', 'assist', 'red_card', 'yellow_card', 'sub_in', 'sub_out']);
-            $table->integer('minute');
+            $table->enum('type',['goal', 'penalty_goal', 'penalty_fail', 'own_goal', 'assist', 'red_card', 'yellow_card', 'sub_in', 'sub_out']);
+            $table->string('minute', 6);
             $table->timestamps();
 
             $table->foreign('match_id')->references('id')->on('matches');

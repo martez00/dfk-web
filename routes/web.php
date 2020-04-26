@@ -19,7 +19,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 //admin
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin_access']], function () {
-    Route::get('/test', ['uses' => 'Admin\AdminPageController@test']);
     Route::get('/', ['uses' => 'Admin\AdminPageController@index', 'as' => 'admin.index']);
 
     Route::group(['middleware' => ['admin']], function () {

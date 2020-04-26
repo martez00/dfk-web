@@ -17,12 +17,14 @@ class MatchController extends Controller
     public function index() {
 
         $teams = Team::mainTeamOrRelatedToMainTeam()->get();
+        $allTeams = Team::all();
         $seasons = Season::orderBy('start_date', 'DESC')->get();
         $tournaments = Tournament::all();
+        $players = Player::all();
 
-        $matches = Match::mainTeamMatches()->orderBy('date', 'DESC')->paginate(30);
+        $matches = Match::searchFilter()->mainTeamMatches()->orderBy('date', 'DESC')->paginate(30);
 
-        return view('admin.matches.index', compact('matches', 'teams', 'seasons', 'tournaments'));
+        return view('admin.matches.index', compact('matches', 'teams', 'allTeams', 'seasons', 'tournaments', 'players'));
     }
 
     public function create($team_id, $season_id, $tournament_id) {
@@ -70,7 +72,10 @@ class MatchController extends Controller
         $assignedPlayersForMainTeam = $match->players()->where('team_id', $match->team_id)->get();
         $assignedPlayersForOpponentTeam = $match->players()->where('team_id', $match->opponent_team_id)->get();
 
-        return view('admin.matches.edit', compact('match', 'teams', 'allPlayersForMainTeam', 'allPlayersForOpponentTeam', 'assignedPlayersForMainTeam', 'assignedPlayersForOpponentTeam'));
+        $assignedEventsForMainTeam = $match->events()->where('team_id', $match->team_id)->get();
+        $assignedEventsForOpponentTeam = $match->events()->where('team_id', $match->opponent_team_id)->get();
+
+        return view('admin.matches.edit', compact('match', 'teams', 'allPlayersForMainTeam', 'allPlayersForOpponentTeam', 'assignedPlayersForMainTeam', 'assignedPlayersForOpponentTeam', 'assignedEventsForMainTeam', 'assignedEventsForOpponentTeam'));
     }
 
     public function update(Match $match, Request $request) {

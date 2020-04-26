@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Input;
 
 class Player extends Model
 {
+    protected $fillable = ['name', 'surname'];
+
     // --------------------------------- relationships -----------------------------------------------------------------
 
     public function seasonsTeams()

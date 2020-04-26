@@ -74,7 +74,7 @@
                             </tbody>
                         </table>
                     </div>
-                    {{ $tournaments->render("pagination::bootstrap-4") }}
+                    {{ $tournaments->appends(request()->input())->links("pagination::bootstrap-4") }}
                 </div>
             </div>
         </div>
