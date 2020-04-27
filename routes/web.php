@@ -10,6 +10,8 @@ Route::get('/parama', ['uses' => 'PageController@support', 'as' => 'support']);
 Route::get('/bilietai', ['uses' => 'PageController@tickets', 'as' => 'tickets']);
 Route::get('/fanai', ['uses' => 'PageController@fans', 'as' => 'fans']);
 
+Route::get('/rungtynes/{id}/{slug}', ['uses' => 'MatchController@show', 'as' => 'matches.show']);
+
 // authentication
 Route::group(['prefix' => 'admin'], function () {
     Route::get('login', ['uses' => 'Auth\LoginController@showLoginForm', 'as' => 'login']);

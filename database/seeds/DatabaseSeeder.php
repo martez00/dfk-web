@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MatchesTableSeeder::class);
         $this->call(MatchPlayersTableSeeder::class);
         $this->call(MatchEventsTableSeeder::class);
-        
+
         Schema::enableForeignKeyConstraints();
         Model::reguard();
     }

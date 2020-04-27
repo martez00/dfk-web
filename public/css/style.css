@@ -1653,14 +1653,13 @@ blockquote i:before {
 -------------------------------------*/
 .rs-tab .club-details_data ul.nav {
   padding-bottom: 20px;
-  margin-bottom: 40px;
 }
 .rs-tab .club-details_data ul.nav li {
   padding: 0 5px 0 0;
   border: none;
   border-radius: 0;
   display: inline-block;
-  width: 20%;
+  width: 50%;
   text-align: center;
 }
 .rs-tab .club-details_data ul.nav li a {
@@ -4841,4 +4840,13 @@ blockquote i:before {
     transform: scaleX(1);
     opacity: .8;
   }
+}
+.match-divider {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 3px;
+  border-radius: 4px;
 }

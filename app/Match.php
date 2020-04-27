@@ -31,7 +31,7 @@ class Match extends Model
 
     public function events()
     {
-        return $this->hasMany('App\MatchEvent', 'match_id')->orderBy('minute', 'DESC');
+        return $this->hasMany('App\MatchEvent', 'match_id');
     }
 
     public function players()
@@ -89,6 +89,49 @@ class Match extends Model
             }
         } else {
             return 'not_finished';
+        }
+    }
+
+    public function slug() {
+        if($this->type == 'home' || $this->type == 'neutral') {
+            $homeTeamSlug = str_slug($this->team->name);
+            $awayTeamSlug = str_slug($this->opponentTeam->name);
+        } else {
+            $homeTeamSlug = str_slug($this->opponentTeam->name);
+            $awayTeamSlug = str_slug($this->team->name);
+        }
+        return $homeTeamSlug . '-' . $awayTeamSlug;
+    }
+
+    public function homeTeam() {
+        if($this->type == 'home' || $this->type == 'neutral') {
+            return $this->team;
+        } else {
+            return $this->opponentTeam;
+        }
+    }
+
+    public function homeTeamScore() {
+        if($this->type == 'home' || $this->type == 'neutral') {
+            return $this->team_score;
+        } else {
+            return $this->opponent_team_score;
+        }
+    }
+
+    public function awayTeam() {
+        if($this->type == 'home' || $this->type == 'neutral') {
+            return $this->opponentTeam;
+        } else {
+            return $this->team;
+        }
+    }
+
+    public function awayTeamScore() {
+        if($this->type == 'home' || $this->type == 'neutral') {
+            return $this->opponent_team_score;
+        } else {
+            return $this->team_score;
         }
     }
 }

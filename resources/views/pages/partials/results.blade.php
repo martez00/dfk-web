@@ -9,7 +9,7 @@
          data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="true" data-md-device-dots="false">
         @foreach($matches as $match)
             <div class="items">
-                <a href="#">
+                <a href="{{ route('matches.show', ['id' => $match->id, 'slug' => $match->slug()]) }}">
                     <div class="vanues">
                         <div class="stadium">{{ $match->location }}</div>
                         <div class="date">{{ date("Y-m-d H:i", strtotime($match->date . ' ' . $match->time)) }}</div>
