@@ -18,58 +18,304 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="events">
-                            @if($firstHalfEvents || $secondHalfEvents)
-                                <div class="row match-divider">
-                                    <div class="col-md-12 text-center">
-                                        Rungtynių pradžia
+                            <div class="match-events-wrapper animate-links our-team-home">
+                                <div class="text-center lined-bottom">
+                                    <div class="h5 text-primary font-weight-more">19:30</div>
+                                    <div class="h5 font-weight-morer text-uppercase pb-2">
+                                        <div class="liney"><span>Rungtynių pradžia</span></div>
                                     </div>
                                 </div>
-                                @if($firstHalfEvents)
-                                    @foreach($firstHalfEvents as $event)
+                                <div class="match-events">
+                                    <div class="match-event event-home">
                                         <div class="row">
-                                            <div class="col-md-5">
-
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/richlord-ennin/">Richlord Ennin</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/ball.svg" alt="Įvartis!" data-toggle="tooltip" data-placement="top" title="" data-original-title="Įvartis!"></span>
+                                                </div>
                                             </div>
-                                            <div class="col-md-2 text-center">
-                                                <span style="background-color: red; color: white; font-weight: bold; padding: 5px; font-size: 20px;">{{ $event->minute }}'</span>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">9’</div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-5">
-
+                                            <div class="col-5 col-lg px-0 px-lg-3">
                                             </div>
                                         </div>
-                                    @endforeach
-                                @endif
-                                <div class="row match-divider">
-                                    <div class="col-md-12 text-center">
-                                        Pertrauka
-                                    </div>
-                                </div>
-                                @if($secondHalfEvents)
-                                    @foreach($secondHalfEvents as $event)
+                                    </div><div class="match-event event-away">
                                         <div class="row">
-                                            <div class="col-sm-6">
-                                                {{ $event->player->name }} {{ $event->player->surname }}
+                                            <div class="col-5 col-lg px-0 px-lg-3">
                                             </div>
-                                            <div class="col-sm-2">
-                                                {{ $event->type }}
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">15’</div>
+                                                </div>
                                             </div>
-                                            <div class="col-sm-2">
-                                                {{ $event->minute }}
-                                            </div>
-                                            <div class="col-sm-2">
-                                                {{ $event->team->name }}
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-start align-items-center">
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/substitute.svg" alt="Keitimas" data-toggle="tooltip" data-placement="top" title="" data-original-title="Keitimas"></span>
+                                                    <div class="d-flex flex-column ml-2 ml-lg-3">
+                                                        <span>Šarūnas Jurevičius</span>
+                                                        <span class="font-size-sm color-gray">Rafael Broetto Henrique</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    @endforeach
-                                @endif
-                                <div class="row match-divider">
-                                    <div class="col-md-12 text-center">
-                                        Rungtynių pabaiga
+                                    </div><div class="match-event event-home">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/ivan-tatomirovic/">Ivan Tatomirovic</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/yellow-card.svg" alt="Geltona kortelė" data-toggle="tooltip" data-placement="top" title="" data-original-title="Geltona kortelė"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">17’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-home">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/david-ngog/">David Ngog</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/ball.svg" alt="Įvartis!" data-toggle="tooltip" data-placement="top" title="" data-original-title="Įvartis!"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">25’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                        </div>
+                                    </div>                            </div>
+                                <div class="text-center lined-top lined-bottom">
+                                    <div class="h5 font-weight-morer text-uppercase py-2">
+                                        <div class="liney"><span>Pertrauka</span></div>
                                     </div>
                                 </div>
-                            @else
-                                Nėra informacijos.
-                            @endif
+                                <div class="match-events">
+                                    <div class="match-event event-home">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/karolis-uzela/">Karolis Uzėla</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/yellow-card.svg" alt="Geltona kortelė" data-toggle="tooltip" data-placement="top" title="" data-original-title="Geltona kortelė"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">48’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-home">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/mantas-kuklys/">Mantas Kuklys</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/ball.svg" alt="Įvartis!" data-toggle="tooltip" data-placement="top" title="" data-original-title="Įvartis!"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">49’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-away">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">49’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-start align-items-center">
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/substitute.svg" alt="Keitimas" data-toggle="tooltip" data-placement="top" title="" data-original-title="Keitimas"></span>
+                                                    <div class="d-flex flex-column ml-2 ml-lg-3">
+                                                        <span>Sebastian Vasquez Gamboa</span>
+                                                        <span class="font-size-sm color-gray">Paulius Janušauskas</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-away">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">54’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-start align-items-center">
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/red-card.svg" alt="Raudona kortelė" data-toggle="tooltip" data-placement="top" title="" data-original-title="Raudona kortelė"></span>
+                                                    <div class="d-flex flex-column ml-2 ml-lg-3">
+                                                        <span>Justinas Januševskij</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-home">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/higor-vidal/">Higor Felipe Vidal</a>
+                                                        <a class="font-size-sm color-gray" href="https://fkzalgiris.lt/player/mantas-kuklys/">Mantas Kuklys</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/substitute.svg" alt="Keitimas" data-toggle="tooltip" data-placement="top" title="" data-original-title="Keitimas"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">60’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-away">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">63’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-start align-items-center">
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/yellow-card.svg" alt="Geltona kortelė" data-toggle="tooltip" data-placement="top" title="" data-original-title="Geltona kortelė"></span>
+                                                    <div class="d-flex flex-column ml-2 ml-lg-3">
+                                                        <span>Matheus Bissi Da Silva</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-home">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/liviu-antal/">Liviu Ion Antal</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/ball.svg" alt="Įvartis!" data-toggle="tooltip" data-placement="top" title="" data-original-title="Įvartis!"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">65’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-away">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">69’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-start align-items-center">
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/substitute.svg" alt="Keitimas" data-toggle="tooltip" data-placement="top" title="" data-original-title="Keitimas"></span>
+                                                    <div class="d-flex flex-column ml-2 ml-lg-3">
+                                                        <span>Vytas Gašpuitis</span>
+                                                        <span class="font-size-sm color-gray">Ernestas Veliulis</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-home">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/hugo-videmont/">Hugo Videmont</a>
+                                                        <a class="font-size-sm color-gray" href="https://fkzalgiris.lt/player/karolis-uzela/">Karolis Uzėla</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/substitute.svg" alt="Keitimas" data-toggle="tooltip" data-placement="top" title="" data-original-title="Keitimas"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">70’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-home">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-end align-items-center text-right">
+                                                    <div class="d-flex flex-column mr-2 mr-lg-3">
+                                                        <a href="https://fkzalgiris.lt/player/matas-vareika/">Matas Vareika</a>
+                                                        <a class="font-size-sm color-gray" href="https://fkzalgiris.lt/player/richlord-ennin/">Richlord Ennin</a>
+                                                    </div>
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/substitute.svg" alt="Keitimas" data-toggle="tooltip" data-placement="top" title="" data-original-title="Keitimas"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">74’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                        </div>
+                                    </div><div class="match-event event-away">
+                                        <div class="row">
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                            </div>
+                                            <div class="col-2 col-lg-1">
+                                                <div class="d-flex h-100 align-items-center justify-content-center font-size-md font-weight-bold">
+                                                    <div class="h4 line-height-1 number-box">92’</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 col-lg px-0 px-lg-3">
+                                                <div class="d-flex h-100 justify-content-start align-items-center">
+                                                    <span class="flex-shrink-0"><img class="img-fluid event-icon" src="https://fkzalgiris.lt/wp-content/themes/fkzalgiris/images/icons/yellow-card.svg" alt="Geltona kortelė" data-toggle="tooltip" data-placement="top" title="" data-original-title="Geltona kortelė"></span>
+                                                    <div class="d-flex flex-column ml-2 ml-lg-3">
+                                                        <span>Rafael Da Silva Floro</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>            </div>
+                                <div class="text-center lined-top">
+                                    <div class="h5 font-weight-morer text-uppercase pt-2">
+                                        <div class="liney"><span>Finalinis švilpukas</span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="players">
                             <div class="row">
