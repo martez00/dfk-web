@@ -53,7 +53,8 @@ class TeamController extends Controller
     public function update(Team $team, Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:teams,name,' . $team->id
+            'name' => 'required|unique:teams,name,' . $team->id,
+            'related_team_id' => 'nullable|exists:teams,id'
         ]);
 
         $team->name = $request->input('name');
@@ -64,19 +65,13 @@ class TeamController extends Controller
         $team->email = $request->input('email');
         $team->address = $request->input('address');
         $team->website = $request->input('website');
+        $team->related_team_id = $request->input('related_team_id');
         $team->save();
 
         if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
             $request->file('logo')->move($team->logoPath(), $team->id);
         }
 
-        return redirect()->back()->with('success', 'Komanda sėkmingai atnaujinta.');
-    }
-
-    public function updateTeamBelongsTo($id, Request $request) {
-        $team = Team::findOrFail($id);
-        $team->related_team_id = $request->input('related_team_id');
-        $team->save();
         return redirect()->back()->with('success', 'Komanda sėkmingai atnaujinta.');
     }
 }

@@ -39455,7 +39455,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3943,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 659,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39465,7 +39465,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3944,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 660,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39475,7 +39475,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3945,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 661,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39485,7 +39485,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3946,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 662,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39495,7 +39495,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3947,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 663,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39505,7 +39505,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3948,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 664,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39515,7 +39515,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3949,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 665,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39525,7 +39525,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3950,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 666,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39535,7 +39535,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3951,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 667,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39545,7 +39545,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3952,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 324,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39555,7 +39555,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3953,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 446,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39565,7 +39565,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3954,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 668,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39575,7 +39575,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3955,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 669,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39585,7 +39585,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3956,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 670,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39595,7 +39595,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3957,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 671,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39605,7 +39605,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3958,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 672,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39615,7 +39615,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3959,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 673,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:20',
@@ -39625,7 +39625,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 3960,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 674,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:20',
@@ -40167,7 +40167,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4014,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 678,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40177,7 +40177,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4015,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 669,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40187,7 +40187,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4016,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 679,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40197,7 +40197,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4017,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 680,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40207,7 +40207,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4018,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 661,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40217,7 +40217,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4019,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 681,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40227,7 +40227,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4020,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 673,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40237,7 +40237,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4021,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 668,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40247,7 +40247,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4022,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 682,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40257,7 +40257,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4023,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 674,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40267,7 +40267,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4024,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 446,
                 'starting_lineup' => 1,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40277,7 +40277,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4025,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 672,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:21',
@@ -40287,7 +40287,7 @@ class MatchPlayersTableSeeder extends Seeder
             array (
                 'id' => 4026,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 665,
                 'starting_lineup' => 0,
                 'created_at' => '2020-04-26 13:13:21',

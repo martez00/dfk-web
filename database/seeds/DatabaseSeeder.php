@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
+        Schema::disableForeignKeyConstraints();
 
         $this->call(UsersTableSeeder::class);
         $this->call(RolesTableSeeder::class);
@@ -27,7 +29,8 @@ class DatabaseSeeder extends Seeder
         $this->call(MatchesTableSeeder::class);
         $this->call(MatchPlayersTableSeeder::class);
         $this->call(MatchEventsTableSeeder::class);
-
+        
+        Schema::enableForeignKeyConstraints();
         Model::reguard();
     }
 }

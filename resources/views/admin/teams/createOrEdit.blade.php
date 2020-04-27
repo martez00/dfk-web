@@ -14,11 +14,11 @@
                 <a class="btn btn-sm btn-outline-primary mb-3" href="{{ route('teams.create') }}">Sukurti naują
                     komandą</a>
             @endif
-            <div class="card">
-                <div class="card-header font-weight-bold">
-                    Komanda
-                </div>
-                <form method="POST" action="{{ $formUrl }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ $formUrl }}" enctype="multipart/form-data">
+                <div class="card">
+                    <div class="card-header font-weight-bold">
+                        Komanda
+                    </div>
                     @isset($team)
                         <input type="hidden" name="_method" value="PUT">
                     @endif
@@ -121,51 +121,48 @@
                     <div class="card-footer">
                         <button class="btn btn-sm btn-success btn-block">Išsaugoti</button>
                     </div>
-                </form>
-            </div>
-            @if(isset($team))
-                <div class="row">
-                    <div class="col-md-6  col-xs-12 mt-3">
-                        <div class="card">
-                            <div class="card-header font-weight-bold">
-                                Komandos priklausančios šiai komandai
-                            </div>
-                            <div class="card-body">
-                                <ul class="last-li-no-margin">
-                                    @forelse($team->relatedTeams as $relatedTeam)
-                                        <li>
-                                            <a href="{{ route('teams.edit', $relatedTeam->id) }}">{{ $relatedTeam->name }}</a>
-                                        </li>
-                                    @empty
-                                        <li>
-                                            Nėra įvesta šiai komandai priklausančių komandų.
-                                        </li>
-                                    @endforelse
-                                </ul>
+                </div>
+                @if(isset($team))
+                    <div class="row">
+                        <div class="col-md-6  col-xs-12 mt-3">
+                            <div class="card">
+                                <div class="card-header font-weight-bold">
+                                    Komandos priklausančios šiai komandai
+                                </div>
+                                <div class="card-body">
+                                    <ul class="last-li-no-margin">
+                                        @forelse($team->relatedTeams as $relatedTeam)
+                                            <li>
+                                                <a href="{{ route('teams.edit', $relatedTeam->id) }}">{{ $relatedTeam->name }}</a>
+                                            </li>
+                                        @empty
+                                            <li>
+                                                Nėra įvesta šiai komandai priklausančių komandų.
+                                            </li>
+                                        @endforelse
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6  col-xs-12 mt-3">
-                        <div class="card">
-                            <div class="card-header font-weight-bold">
-                                Komanda, kuriai priklauso ši komanda
-                            </div>
-                            <div class="card-body">
-                                <form method="post" action="{{ route('teams.belongs_to.update', $team->id) }}">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <select class="single-select-with-typing form-control form-control-sm" id="related_team_id" name="related_team_id">
+                        <div class="col-md-6  col-xs-12 mt-3">
+                            <div class="card">
+                                <div class="card-header font-weight-bold">
+                                    Komanda, kuriai priklauso ši komanda
+                                </div>
+                                <div class="card-body">
+                                    <select class="single-select-with-typing form-control form-control-sm"
+                                            id="related_team_id" name="related_team_id">
                                         <option value="" selected>...</option>
                                         @foreach($teams as $tmpTeam)
                                             <option value="{{ $tmpTeam->id }}"
                                                     @if($team->belongsToTeam && $team->belongsToTeam->id == $tmpTeam->id) selected @endif>{{ $tmpTeam->name }}</option>
                                         @endforeach
                                     </select>
-                                    <button type="submit" class="btn btn-sm btn-block btn-success mt-3">Išsaugoti</button>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+            </form>
             @endif
         </div>
     </div>

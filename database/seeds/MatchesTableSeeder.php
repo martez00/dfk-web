@@ -2781,7 +2781,7 @@ class MatchesTableSeeder extends Seeder
             array (
                 'id' => 121,
                 'team_id' => 1,
-                'opponent_team_id' => 22,
+                'opponent_team_id' => 58,
                 'type' => 'home',
                 'team_score' => 0,
                 'opponent_team_score' => 9,
@@ -2827,7 +2827,7 @@ class MatchesTableSeeder extends Seeder
             array (
                 'id' => 123,
                 'team_id' => 1,
-                'opponent_team_id' => 22,
+                'opponent_team_id' => 58,
                 'type' => 'away',
                 'team_score' => 0,
                 'opponent_team_score' => 8,

@@ -21521,7 +21521,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1955,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 659,
                 'type' => 'penalty_goal',
                 'minute' => '79',
@@ -21532,7 +21532,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1956,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 660,
                 'type' => 'sub_out',
                 'minute' => '46',
@@ -21543,7 +21543,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1957,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 661,
                 'type' => 'goal',
                 'minute' => '11',
@@ -21554,7 +21554,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1958,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 661,
                 'type' => 'sub_out',
                 'minute' => '46',
@@ -21565,7 +21565,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1959,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 662,
                 'type' => 'goal',
                 'minute' => '39',
@@ -21576,7 +21576,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1960,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 662,
                 'type' => 'goal',
                 'minute' => '47',
@@ -21587,7 +21587,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1961,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 663,
                 'type' => 'sub_out',
                 'minute' => '46',
@@ -21598,7 +21598,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1962,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 665,
                 'type' => 'sub_out',
                 'minute' => '29',
@@ -21609,7 +21609,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1963,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 666,
                 'type' => 'goal',
                 'minute' => '80',
@@ -21620,7 +21620,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1964,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 324,
                 'type' => 'sub_out',
                 'minute' => '46',
@@ -21631,7 +21631,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1965,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 446,
                 'type' => 'goal',
                 'minute' => '15',
@@ -21642,7 +21642,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1966,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 446,
                 'type' => 'goal',
                 'minute' => '16',
@@ -21653,7 +21653,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1967,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 446,
                 'type' => 'goal',
                 'minute' => '23',
@@ -21664,7 +21664,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1968,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 446,
                 'type' => 'goal',
                 'minute' => '50',
@@ -21675,7 +21675,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1969,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 668,
                 'type' => 'sub_in',
                 'minute' => '46',
@@ -21686,7 +21686,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1970,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 669,
                 'type' => 'sub_in',
                 'minute' => '46',
@@ -21697,7 +21697,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1971,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 671,
                 'type' => 'sub_in',
                 'minute' => '29',
@@ -21708,7 +21708,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1972,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 672,
                 'type' => 'sub_in',
                 'minute' => '46',
@@ -21719,7 +21719,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1973,
                 'match_id' => 121,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 673,
                 'type' => 'sub_in',
                 'minute' => '46',
@@ -21994,7 +21994,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1998,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 679,
                 'type' => 'goal',
                 'minute' => '89',
@@ -22005,7 +22005,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 1999,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 680,
                 'type' => 'goal',
                 'minute' => '35',
@@ -22016,7 +22016,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2000,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 661,
                 'type' => 'goal',
                 'minute' => '36',
@@ -22029,7 +22029,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2001,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 661,
                 'type' => 'sub_out',
                 'minute' => '46',
@@ -22040,7 +22040,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2002,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 673,
                 'type' => 'goal',
                 'minute' => '90',
@@ -22051,7 +22051,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2003,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 682,
                 'type' => 'sub_out',
                 'minute' => '46',
@@ -22062,7 +22062,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2004,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 446,
                 'type' => 'goal',
                 'minute' => '12',
@@ -22073,7 +22073,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2005,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 446,
                 'type' => 'goal',
                 'minute' => '14',
@@ -22084,7 +22084,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2006,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 672,
                 'type' => 'sub_in',
                 'minute' => '46',
@@ -22095,7 +22095,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2007,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 665,
                 'type' => 'sub_in',
                 'minute' => '46',
@@ -22106,7 +22106,7 @@ class MatchEventsTableSeeder extends Seeder
             array (
                 'id' => 2008,
                 'match_id' => 123,
-                'team_id' => 22,
+                'team_id' => 58,
                 'player_id' => 665,
                 'type' => 'goal',
                 'minute' => '79',
