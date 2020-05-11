@@ -20,8 +20,9 @@
 <body>
 @yield('content')
 
-<script src="{{ bustCache('js/jquery.min.js') }}"></script>
-<script src="{{ bustCache('js/auth/popper.js') }}"></script>
+<script src="{{ bustCache('js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ bustCache('js/jquery-migrate-3.0.1.js') }}"></script>
+<script src="{{ bustCache('js/popper.min.js') }}"></script>
 <script src="{{ bustCache('js/bootstrap.min.js') }}"></script>
 <script src="{{ bustCache('js/auth/main.js') }}"></script>
 

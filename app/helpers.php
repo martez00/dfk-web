@@ -22,3 +22,8 @@ function currentSeasonId() {
     $currentSeasonSetting = Setting::where('name', 'current_season')->first();
     return (int) $currentSeasonSetting->value;
 }
+
+function formatTitleForSlider($title) {
+    $title = wordwrap($title, 40, "<br>", false);
+    return strip_tags($title, '<br>');
+}

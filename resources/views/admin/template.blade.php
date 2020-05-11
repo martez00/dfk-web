@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.html') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/fav.png') }}">
     <link rel="stylesheet" href="{{ bustCache('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ bustCache('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ bustCache('css/fontawesome.css') }}">
 
     <link href="{{ bustCache('css/admin/main.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ bustCache('css/select2.min.css') }}">
@@ -27,7 +27,8 @@
     </div>
 </div>
 
-<script src="{{ bustCache('js/jquery.min.js') }}"></script>
+<script src="{{ bustCache('js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ bustCache('js/jquery-migrate-3.0.1.js') }}"></script>
 <script src="{{ bustCache('js/popper.min.js') }}"></script>
 <script src="{{ bustCache('js/bootstrap.min.js') }}"></script>
 <script src="{{ bustCache('js/select2.min.js') }}"></script>
