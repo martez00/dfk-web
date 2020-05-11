@@ -191,12 +191,14 @@ jQuery(document).ready(function($) {
     }
     // ------- countdown ------- //
     if ($('.defaultCountdown').length) {
-        var austDay = new Date();
-        austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
-        $('.defaultCountdown').countdown({
-            until: austDay
+        $('.defaultCountdown').each(function(i, obj) {
+            let date = new Date($(this).attr('match-date'));
+            console.log(date);
+            console.log($(this).attr('match-date'));
+            $(this).countdown({
+                until: date
+            });
         });
-        $('#year').text(austDay.getFullYear());
     }
     // ------- countdown End ------- // 
 

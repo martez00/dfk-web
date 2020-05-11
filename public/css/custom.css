@@ -149,6 +149,15 @@ html body {
 .p90 {
 	padding: 80px 0;
 }
+.pb90 {
+	padding-bottom: 90px;
+}
+.pb20 {
+	padding-bottom: 20px;
+}
+.pb180 {
+	padding-bottom: 180px;
+}
 .p80 {
 	padding: 80px 0;
 }
@@ -1278,6 +1287,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	float: left;
 	overflow: hidden;
 	position: relative;
+}
+.new-thumb {
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	height: 220px !important;
+	width: 100% !important;
 }
 .vid-thumb img, .vthumb img, .thumb img {
 	width: 100%;
@@ -3963,8 +3979,7 @@ ul.mres {
 
 .nms-box .team-logo-right img, .nms-box .team-logo-left img {
 	display: inline-block;
-	width: 60px;
-	height: auto;
+	height: 40px;
 }
 .nms-box .team-logo-right strong, .nms-box .team-logo-left strong {
 	display: inline-block;
@@ -7234,6 +7249,9 @@ ul.gallery-row li.gall-cal {
 .h3-twitter .owl-theme .owl-dots .owl-dot.active span, .h3-twitter .owl-theme .owl-dots .owl-dot:hover span {
 	background: #e81f3e;
 }
+.blue-bg {
+	background: #001b34;
+}
 .gray-bg {
 	background: #f7f7f7;
 }
@@ -7455,7 +7473,6 @@ ul.gallery-row li.gall-cal {
 .h3-match-counter {
 	width: 100%;
 	float: left;
-	background: #001b34;
 	padding: 30px 0 25px;
 	position: relative;
 }
@@ -7486,6 +7503,9 @@ ul.gallery-row li.gall-cal {
 .h3-match-counter .team-right, .h3-match-counter .team-left {
 	text-align: center;
 }
+.h3-match-counter .team-right img, .h3-match-counter .team-left img {
+	height: 60px;
+}
 .h3-match-counter .team-right strong, .h3-match-counter .team-left strong {
 	display: block;
 	font-size: 14px;
@@ -7496,7 +7516,7 @@ ul.gallery-row li.gall-cal {
 .mdate-time {
 	color: #7c859a;
 	font-size: 16px;
-	margin: 12px 0 0 55px;
+	margin: 12px 0 0 20px;
 }
 .mdate-time strong {
 	display: block;
@@ -9253,6 +9273,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00181f37', e
 }
 .sidebar .last-match-widget .match-teams-vs li.team-logo {
 	width: 80px;
+}
+.team-logo img {
+	height: 40px;
 }
 .sidebar .last-match-widget .defaultCountdown {
 	width: 100%;

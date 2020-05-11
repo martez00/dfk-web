@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Input;
 
@@ -74,6 +75,16 @@ class Match extends Model
 
     public function scopeFinished($q) {
         $q->where('finished', true)->whereNotNull('team_score')->whereNotNull('opponent_team_score');
+    }
+
+    public function scopeNotFinished($q) {
+        $q->where('finished', false)->whereNull('team_score')->whereNull('opponent_team_score');
+    }
+
+    public function scopeNotStarted($q) {
+        $q->notFinished()->where(function($dateQuery) {
+            $dateQuery->where('date', Carbon::now()->toDate())->orWhere('date', '>', Carbon::now()->toDate());
+        });
     }
 
     // --------------------------------- methods -----------------------------------------------------------------------
