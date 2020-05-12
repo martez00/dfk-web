@@ -83,7 +83,7 @@ Sidebar heading:	font:28px/28px 'Roboto Condensed', serif;
 
 
 /* Google Fonts Start */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,500i,600,600i,700,700i,800,800i&display=swap');
@@ -94,14 +94,14 @@ html body {
 }
 
 .wrapper h1, .wrapper h2, .wrapper h6 {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	margin: 0px;
 }
 
 
 .wrapper h3, .wrapper h4, .wrapper h5 {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	margin: 0px;
 }
@@ -497,7 +497,7 @@ li.acctount-btn {
 	padding:0 12px;
 	line-height: 90px;
 	display: block;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -694,7 +694,7 @@ li.acctount-btn {
 	height: 60px;
 	text-align: center;
 	line-height: 56px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 50px;
 	font-weight: 800;
 	position: absolute;
@@ -706,7 +706,7 @@ li.acctount-btn {
 .slidetab-box h6 {
 	margin: 0 0 7px;
 	font-size: 18px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 }
 .slidetab-box h6 a {
@@ -847,7 +847,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 }
 .match-teams-vs li.team-logo strong {
 	display: block;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	color: #222222;
 	font-weight: 400;
@@ -866,7 +866,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	line-height: 24px;
 }
 .nmw-txt strong {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #e81f3e;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -890,7 +890,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 }
 .next-match-widget .countdown-amount {
 	color: #666666;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-weight: 300;
 }
@@ -956,7 +956,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 14px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .point-table-widget table tbody tr:last-child {
 	border: 0px;
@@ -969,7 +969,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	padding: 11px 10px 11px;
 	font-size: 14px;
 	color: #777777;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .point-table-widget table tbody tr td img {
 	margin-right: 5px;
@@ -1002,7 +1002,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 14px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	background-color: #e81f3e !important;
 	text-align: center;
 	border-radius: 0;
@@ -1012,7 +1012,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	font-size: 16px;
 	font-weight: 700;
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	background-color: #e81f3e !important;
 	text-align: center;
 	border-bottom-left-radius: 0;
@@ -1154,7 +1154,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 }
 .news-Media-gallery .nav-tabs .nav-item .nav-link {
 	color: #888888;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
 	background: none;
@@ -1667,7 +1667,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	font-weight: 300;
 	color: #ccc;
 	border-left: 1px solid #3b4156;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	padding: 0 0 0 5px;
 	width: 25%;
 	line-height: 24px;
@@ -1867,7 +1867,7 @@ a.full-team:hover {
 	color: #222;
 }
 .pro-txt .price {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #e81f3e;
 	margin: 0 0 5px;
 }
@@ -2087,7 +2087,7 @@ a.full-team:hover {
 .tweets-banner .tbanner strong {
 	display: block;
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	text-decoration: underline;
 	font-size: 40px;
 	margin: 0 0 20px;
@@ -2251,7 +2251,7 @@ a.full-team:hover {
 }
 .footer-links li a {
 	color: #99a1b4;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 }
 .footer-links li a i {
@@ -2287,7 +2287,7 @@ a.full-team:hover {
 	background: #e81f3e;
 	color: #fff;
 	font-weight: 700;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	padding: 0 20px;
 	line-height: 40px;
 	font-size: 12px;
@@ -2609,7 +2609,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	line-height: 50px;
 	font-size: 20px;
 	color: #222222;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	border-radius: 4px 4px 0 0;
 }
 .match-result-tabs .nav-tabs .nav-item.show .nav-link, .match-result-tabs .nav-tabs .nav-link.active, .match-result-tabs .nav-tabs .nav-link:hover {
@@ -2716,7 +2716,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .last-match .team-name strong {
 	display: block;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	text-transform: uppercase;
 }
@@ -2726,7 +2726,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	text-transform: uppercase;
 	font-size: 14px;
 	color: #999999;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .last-match .mscore span {
 	background: #ffcb05;
@@ -2823,7 +2823,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	line-height: 44px;
 	color: #fff;
 	font-weight: 400;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	border-radius: 0 0 3px 3px;
 }
@@ -2928,7 +2928,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	font-weight: 300;
 	color: #ccc;
 	border-right: 1px solid rgba(255,255,255,.5);
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	width: 25%;
 	line-height: 20px;
 }
@@ -3218,7 +3218,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	color: #fff;
 	font-size: 18px;
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	display: block;
 	position: relative;
@@ -3262,7 +3262,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .newsletter-two strong {
 	display: block;
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 30px;
@@ -3397,7 +3397,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	color: #e81f3e;
 }
 .shop-filter strong {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	font-weight: 400;
 	color: #666666;
@@ -3626,7 +3626,7 @@ ul.mres {
 	color: #dddddd;
 	display: inline-block;
 	font-size: 24px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0 0 5px;
 }
 .mres span {
@@ -3720,12 +3720,12 @@ ul.mres {
 .last-match-widget .countdown-amount {
 	color: #fff;
 	font-size: 20px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 }
 .last-match-widget .countdown-period {
 	color: #7c859a;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	text-transform: uppercase;
 }
@@ -3912,7 +3912,7 @@ ul.mres {
 }
 .match-right .mtl-right strong, .match-left .mtl-left strong {
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 24px;
@@ -3929,7 +3929,7 @@ ul.mres {
 	text-align: center;
 	color: #fff;
 	font-size: 14px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .match-right ul li span, .match-left ul li span {
 	color: #e81f3e;
@@ -3941,7 +3941,7 @@ ul.mres {
 	color: #ffcb05;
 	text-transform: uppercase;
 	font-size: 16px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .last-match-result-full .mscore strong {
 	width: 50px;
@@ -3951,7 +3951,7 @@ ul.mres {
 	text-align: center;
 	line-height: 60px;
 	color: #dddddd;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	margin-bottom: 10px;
 }
@@ -3998,7 +3998,7 @@ ul.mres {
 	display: inline-block;
 	font-size: 24px;
 	font-weight: 400;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 55px;
 	margin-right: 16px;
 }
@@ -4032,7 +4032,7 @@ ul.mres {
 	color: #e81f3e;
 	font-size: 16px;
 	text-transform: uppercase;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0 0 5px;
 	display: block;
 }
@@ -4094,7 +4094,7 @@ ul.mres {
 }
 .next-match-box .team-logo-left strong, .next-match-box .team-logo-right strong {
 	display: block;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 600;
 	margin: 10px 0 0;
@@ -4114,12 +4114,12 @@ ul.mres {
 .next-match-box .countdown-amount {
 	color: #bbbbbb;
 	font-size: 26px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .next-match-box .countdown-period {
 	color: #bbbbbb;
 	font-size: 12px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	text-transform: uppercase;
 }
 .fixtures-light.np {
@@ -4210,7 +4210,7 @@ ul.mres {
 }
 .last-match-result-full-light .lmr-info strong {
 	color: #e81f3e;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 }
 .last-match-result-full-light .lmr-info p {
@@ -4232,7 +4232,7 @@ ul.mres {
 	color: #e81f3e;
 	text-transform: uppercase;
 	font-size: 16px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .last-match-result-full-light .mscore strong {
 	width: 50px;
@@ -4242,7 +4242,7 @@ ul.mres {
 	text-align: center;
 	line-height: 60px;
 	color: #222;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 30px;
 	margin-bottom: 10px;
 }
@@ -4429,7 +4429,7 @@ ul.mres {
 	font-size: 16px;
 	line-height: 26px;
 	position: relative;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .player-details ul li:after {
 	content: " : ";
@@ -4471,7 +4471,7 @@ ul.mres {
 }
 .player-bio blockquote {
 	color: #38a1f3;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 22px;
 	font-style: italic;
 	border-left: 2px solid #38a1f3;
@@ -4507,7 +4507,7 @@ ul.mres {
 	background: #e81f3e;
 	color: #fff;
 	text-align: center;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	text-transform: uppercase;
 	border: 1px solid #e1e1e1;
@@ -4672,7 +4672,7 @@ ul.mres {
 	float: left;
 }
 .colors li strong, .radio-boxes li strong {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #999;
 	margin-right: 10px;
 	font-weight: 500;
@@ -4719,7 +4719,7 @@ ul.mres {
 	text-align: center;
 	color: #999999;
 	margin: 0px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .radio-boxes input[type=radio].css-radio:checked+label.css-label, .radio-boxes input[type=radio].css-radio+label.css-label:hover {
 	background: #e81f3e;
@@ -4774,7 +4774,7 @@ ul.mres {
 }
 .cart-qty li {
 	display: inline-block;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	color: #222222;
 	margin: 0 10px 0 0;
@@ -4809,7 +4809,7 @@ ul.mres {
 	background: #eeeeee;
 	border: 1px solid #e1e1e1;
 	margin-right: 10px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	color: #222222;
 	line-height: 53px;
@@ -5005,14 +5005,14 @@ p.stars a:hover, p.stars a:hover:before {
 .pro-summery p del {
 	color: #999999;
 	font-size: 24px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	margin-right: 15px;
 }
 .pro-summery p ins {
 	color: #e81f3e;
 	font-size: 24px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	text-decoration: none;
 }
@@ -5027,7 +5027,7 @@ p.stars a:hover, p.stars a:hover:before {
 }
 .in-stock {
 	color: #999999;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 }
 .in-stock strong {
@@ -5262,7 +5262,7 @@ ul.post-meta li i {
 	padding: 0 20px;
 	border-radius: 5px;
 	line-height: 40px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 }
 .news-large-post.sticky .post-txt {
@@ -5358,7 +5358,7 @@ ul.post-meta li i {
 }
 .quote-post blockquote p {
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 40px;
 	font-weight: 300;
 	font-style: italic;
@@ -5468,7 +5468,7 @@ ul.post-meta li i {
 .news-large-post .post-txt blockquote p {
 	margin: 0px;
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	line-height: 32px;
 	font-weight: 300;
@@ -5724,7 +5724,7 @@ ul.rep-comments {
 	font-size: 16px;
 	color: #666666;
 	margin: 0 0 20px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .post-comments-form textarea {
 	height: 130px;
@@ -5799,7 +5799,7 @@ ul.rep-comments {
 	color: #fff;
 	font-weight: 400;
 	font-size: 28px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	float: right;
 	line-height: 80px;
 	margin-right: 20px;
@@ -5857,11 +5857,11 @@ ul.rep-comments {
 	line-height: 60px;
 	font-size: 36px;
 	font-weight: 700;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0 0 5px;
 }
 .score-left strong, .score-right strong {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	color: #ffcb05;
 	width: 55px;
@@ -5881,9 +5881,66 @@ ul.rep-comments {
 	float: left;
 	padding: 0 15px;
 }
+.match-tabs-row {
+	cursor: pointer;
+	background: #e81f3e;
+	color: #fff;
+	line-height: 53px;
+	font-size: 16px !important;
+	text-align: center !important;
+	font-weight: 700;
+	padding: 0 20px;
+	border-radius: 5px 5px 0 0;
+	margin-bottom: 20px;
+}
+.match-tabs-col-active, .match-tabs-col:hover {
+	background: #0c263e;
+}
+.match-events-wrapper, .match-events-wrapper a {
+	color: #fff !important;
+	font-size: 16px;
+}
+.match-events-wrapper .liney {
+	position: relative;
+}
+.match-events-wrapper .liney>span {
+	background-color: #fff;
+	border-radius: 5px;
+	color: #000;
+	padding: 5px;
+	position: relative;
+}
+.match-events-wrapper .liney::before {
+	background-color: #fff;
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	top: 50%;
+	content: "";
+	height: 1px;
+}
+.match-events-wrapper .match-events .match-event {
+	padding-top: .3125rem;
+	padding-bottom: .3125rem;
+	position: relative;
+}
+.number-box {
+	flex-shrink: 0;
+	width: 2.30rem;
+	height: 2.1rem;
+	background-color: #fff;
+	color: #000 !important;
+	font-weight: bold !important;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
 .match-header .match-score li.text-left p, .match-header .match-score li.text-right p {
 	text-align: right;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	color: #fff;
 	line-height: 30px;
@@ -5993,7 +6050,7 @@ ul.rep-comments {
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 400;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	line-height: 42px;
 	padding: 0 10px;
@@ -6038,7 +6095,7 @@ ul.rep-comments {
 }
 .team-one-scrore ul li strong {
 	font-weight: 400;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .team-one-scrore.team-two {
 	margin: 0 0 50px;
@@ -6083,7 +6140,7 @@ ul.rep-comments {
 	display: block;
 	color: #2a4076;
 	z-index: 2;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
 }
@@ -6471,14 +6528,13 @@ ul.rep-comments {
 	float: left;
 }
 .match-players h4 {
-	background: #e81f3e;
-	color: #fff;
-	line-height: 53px;
+	background: #ffffff;
+	color: #000;
+	line-height: 40px;
 	font-size: 16px !important;
 	text-align: center !important;
 	font-weight: 700;
-	padding: 0 20px;
-	border-radius: 5px 5px 0 0;
+	padding: 0 10px;
 }
 .team-palyers {
 	width: 100%;
@@ -6641,7 +6697,7 @@ ul.rep-comments {
 	border: 3px solid #e1e1e1;
 	line-height: 47;
 	padding: 0 20px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0 0 10px;
 }
 .contact-form textarea.form-control {
@@ -6749,7 +6805,7 @@ ul.rep-comments {
 }
 .search-form .form-control {
 	height: 53px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	padding: 0 20px;
 	font-size: 18px;
 	line-height: 49px;
@@ -6875,13 +6931,13 @@ ul.rep-comments {
 .match-counter .countdown-section .countdown-amount {
 	font-size: 30px;
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	display: block;
 }
 .match-counter .countdown-section .countdown-period {
 	font-size: 14px;
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	display: block;
 	text-transform: uppercase;
 }
@@ -6959,7 +7015,7 @@ ul.rep-comments {
 	font-weight: 600;
 	padding-left: 8px;
 	padding-top: 1px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .h3-next-match .next-match-box {
 	border: 0px;
@@ -7521,7 +7577,7 @@ ul.gallery-row li.gall-cal {
 	font-size: 14px;
 	color: #e81f3e;
 	margin: 5px 0 0;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .mdate-time {
 	color: #7c859a;
@@ -7548,13 +7604,13 @@ ul.gallery-row li.gall-cal {
 }
 .h3-match-counter .countdown-amount {
 	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 36px;
 	line-height: 30px;
 }
 .h3-match-counter .countdown-period {
 	color: #7c859a;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -7716,7 +7772,7 @@ ul.gallery-row li.gall-cal {
 }
 .footer-widget .quick-links a {
 	color: #999da9;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	text-transform: inherit;
 	display: block;
@@ -7832,7 +7888,7 @@ ul.gallery-row li.gall-cal {
 p.cr {
 	color: #7c859a;
 	font-size: 16px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 p.cr a {
 	color: #e81f3e;
@@ -9242,7 +9298,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00181f37', e
 	box-shadow: 0 5px 15px rgba(0,0,0,.07);
 	cursor: pointer;
 	margin-right: 10px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 #filters button.button.is-checked, #filters .button:hover {
 	color: #fff;
@@ -9255,7 +9311,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00181f37', e
 	padding: 0 20px;
 	border-radius: 4px;
 	font-size: 16px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .live-show:hover {
 	background: #e81f3e;
@@ -9368,7 +9424,7 @@ Search Overlay End
 }
 /*********************************
 Search Overlay End
-*********************************/ 
+*********************************/
 
 /********** |== Animation Transition  == | **********/
 #filters .button, .live-show, .gthumb a, .gthumb, .hvideo-box img, .hvideo-box:after, .hv-info h4 a, .hv-info .play, .hv-info .play:after, .contact-newsletter button, .main-footer.h4-footer .footer-widget .quick-links a, .main-footer.h4-footer .about-widget ul.footer-social li a i, .h4-probox .pro-txt h4 a, .h4-probox .cart-btn i, .h4-probox .cart-btn:after, .social-media-wall .insta-post img, .owl-dot span, .tp-info ul, .tp-info, .tp-info p, .tp-info h4 a, .mv-post, .mv-txt h5 a, .mv-thumb img, .side-video .vpost:after, .share-widget ul li a strong, .nd-btn, .h4-news-box .vthumb:after, .h4-news-box .news-txt h4 a, .ms-news-txt span, .ms-news, .ms-news:after, .home-blue .rev_slider_wrapper a, .footer-social li a, .f-newsletter button, .footer-widget .read-about, .list-box-expand .news-caption h4 a, .list-box-expand .expand-news-img, .list-box-expand, .list-box, .list-box h5 a, .h3-team .nav-link, .lp-name h4 a, .lp-name h4 strong, .lp-social a, .lp-box .lp-name, .lp-thumb:after, .lp-box .vp, .h3-twitter .owl-theme .owl-dots .owl-dot span, .mgall-box:after, .mgall-caption h4, .mgall-caption a, .fvid-cap a.picon, .fvid-cap h5 a, .next-match-fixtures .nmf-loc li, .nmf-loc lia i, .rev_slider_wrapper a, .main-header.header-scrolled, .toplinks .search-btn a, .b2home, .contact-box, .contact-form button, .post-author li.share, .video-img a, .game-statistics tr:nth-child(even), .game-statistics tr:nth-child(odd), .vthumb:after, .vthumb a.play span, .vthumb a.after, .vthumb img, .post-comments-form input[type="submit"], .post-tags li a, .post-txt h4 a, a.rm, .news-list-post .post-txt h4 a, .news-large-post .owl-carousel .owl-nav button.owl-next, .news-large-post .owl-carousel .owl-nav button.owl-prev, .video-thumb a, .video-thumb:before, .video-thumb:after, .post-thumb a, .news-large-post, .news-large-post .post-txt a.rm, .news-large-post .post-txt h3 a, .post-thumb:before, .post-thumb:after, .ng-txt h4 a, .ng-txt a.rm, .comment-form .post-btn, .product-tabs .nav-tabs .nav-link, .radio-boxes input[type=radio].css-radio+label.css-label, .shop-images ul li a, .social-media .social:after, .career-facts table tbody tr, .hlg-thumb:after, .hlg-thumb img, .gal-thumb a, .gal-thumb:before, .gal-thumb:after, .last-match-result-full-light, .last-match .match-info a, .pro-list-box .pro-thumb:after, .pro-list-box, .pro-txt h3 a, .pro-list-box, .next-match-fixtures.light, .nms-box, .nms-info a, .lmr-info a.mh, .match-sponsors li img, .buyticket-btn a, .num, .num:after, .product-slider .owl-theme .owl-nav [class*=owl-], .gt-pagination .page-link, .shop-filter ul li a, .gt-breadcrumbs ul li a, .slogos a, .form-control, .prodcut-slider .owl-carousel .owl-nav button.owl-next, .prodcut-slider .owl-carousel .owl-nav button.owl-prev, .pro-box .a2cart, .news-box-normal .newsp-txt h4 a, .news-box-normal .newsp-txt h4 a, .ts-cap, .star-tag, .team-squad-box a.follow, .match-result-tabs .nav-tabs .nav-link, .story-row h5 a, .tsw-meta li a, .thumb a, .hnews-box .hnews-txt h4 a, .thumb:after, .thumb img, .news-box .news-caption h5 a, .news-box .news-caption h4 a, .pro-box .pro-thumb:after, .pro-box .pro-thumb img, .newsletter input, .tweet-box, .pro-thumb a, .quick-links a, .copyr a, .footer-links li a, .newsletter button:after, .tweet-box .tshare, .tweets-banner .tbanner a, .sponsor-logos a, .pro-txt a.add2cart, .pro-box, .player-txt h3, .player-txt a.playerbio, .player-txt strong.player-desi, a.full-team, .player-txt a.follow, .gallery-thumb a, .gallery-thumb:after, .gallery-thumb img, .vn-txt h4 a, .play, .play span, .play:after, .news-Media-gallery .news-meta li a, .news-Media-gallery .nav-tabs .nav-item .nav-link, .next-match-fixtures .nmf-loc li a, .point-table-widget table tbody tr, .buy-ticket a, .slidetab-box:after, .slidetab-box h6 a, .slidetab-box span, .logo-navbar .nav-item.buy-ticket a, .logo-navbar .nav-item a, .logo-navbar .nav-item a:after, .topsocial a {
@@ -9376,7 +9432,7 @@ Search Overlay End
 	-webkit-transition: all ease-in-out 0.5s;
 }
 .font {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-family: 'Open Sans', sans-serif;
 	font-family: 'Montserrat', sans-serif;
 	font-family: 'Poppins', sans-serif;
