@@ -10,7 +10,12 @@ Route::get('/parama', ['uses' => 'PageController@support', 'as' => 'support']);
 Route::get('/bilietai', ['uses' => 'PageController@tickets', 'as' => 'tickets']);
 Route::get('/fanai', ['uses' => 'PageController@fans', 'as' => 'fans']);
 
-Route::get('/rungtynes/{id}/{slug}', ['uses' => 'MatchController@show', 'as' => 'matches.show']);
+//players
+Route::get('/zaidejas/{id}/{slug?}', ['uses' => 'PlayerController@show', 'as' => 'players.show']);
+
+//matches
+Route::get('/rungtynes/{id}/{slug?}', ['uses' => 'MatchController@show', 'as' => 'matches.show']);
+Route::get('/tarpusavio-rungtynes/{first_team_id}/{second_team_id}/{slug?}', ['uses' => 'MatchController@teamsMutualMatches', 'as' => 'matches.teams_mutual_matches']);
 
 // authentication
 Route::group(['prefix' => 'admin'], function () {

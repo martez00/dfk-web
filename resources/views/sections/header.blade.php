@@ -1,5 +1,33 @@
 <!--Header Start-->
 <header id="main-header" class="main-header">
+    <!--topbar-->
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <ul class="topsocial">
+                        <li><a href="#" class="fb"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="insta"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="yt"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="toplinks">
+                        <li>
+                            <a href="#">Ataskaitos</a>
+                        </li>
+                        <li style="margin-left: 10px;">
+                            <a href="{{ route('support') }}">Parama</a>
+                        </li>
+                        <li style="margin-left: 10px; margin-right: 15px;">
+                            <a href="{{ route('club.contacts') }}">Kontaktai</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--topbar end-->
     <!--Logo + Navbar Start-->
     <div class="logo-navbar">
         <div class="container">
@@ -38,9 +66,6 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('tickets') }}">Bilietai</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('support') }}">Parama</a>
                             </li>
                         </ul>
                     </nav>

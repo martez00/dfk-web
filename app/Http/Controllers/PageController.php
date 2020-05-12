@@ -11,27 +11,20 @@ class PageController extends Controller
     public function homepage()
     {
         $fixtures = Match::with(['team', 'opponentTeam', 'season', 'tournament'])->notStarted()->mainTeamMatches()->orderBy('date', 'ASC')->take(3)->get();
-        $needToTakeResults = 3 + (3 - count($fixtures));
+        $needToTakeResults = 5 + (3 - count($fixtures));
         $results = Match::with(['team', 'opponentTeam', 'season', 'tournament'])->finished()->mainTeamMatches()->orderBy('date', 'DESC')->take($needToTakeResults)->get();
 
         foreach($fixtures as $fixture) {
             $fixture->is_fixture = true;
-            $firstBlockMatches[] = $fixture;
+            $matches[] = $fixture;
         }
 
-        //if there are not enough fixtures for first block, we take some from results
-        $i = 1;
         foreach($results as $result) {
-            if($i <= (3 - count($fixtures))) {
-                $result->is_fixture = false;
-                $firstBlockMatches[] = $result;
-            } else {
-                $secondBlockMatches[] = $result;
-            }
-            $i++;
+            $result->is_fixture = false;
+            $matches[] = $result;
         }
 
-        return view('pages.homepage', compact('firstBlockMatches', 'secondBlockMatches'));
+        return view('pages.homepage.index', compact('matches'));
     }
 
     public function contacts()

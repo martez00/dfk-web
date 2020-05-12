@@ -22,4 +22,14 @@ class MatchPlayer extends Model
     {
         return $this->belongsTo('App\Player', 'player_id');
     }
+
+    // --------------------------------- scopes ------------------------------------------------------------------------
+
+    public function scopeStartingLineupPlayers($q) {
+        $q->where('starting_lineup', true);
+    }
+
+    public function scopeBenchPlayers($q) {
+        $q->where('starting_lineup', false);
+    }
 }

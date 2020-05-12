@@ -158,6 +158,12 @@ html body {
 .pb180 {
 	padding-bottom: 180px;
 }
+.pb0 {
+	padding-bottom: 0 !important;
+}
+.p50-50 {
+	padding: 50px 0 50px 0;
+}
 .p80 {
 	padding: 80px 0;
 }
@@ -194,10 +200,6 @@ html body {
 .mb-60 {
 	margin-bottom: 60px;
 }
-.innerpagebg {
-	background: url(../images/innerpagebg.jpg) no-repeat top center;
-	background-attachment: fixed;
-}
 /********** |== Header Start == | **********/
 .main-header {
 	width: 100%;
@@ -210,7 +212,7 @@ html body {
 	top: 0;
 }
 .main-header .topbar {
-	background: #20273f;
+	background: #edeeef;
 	width: 100%;
 	float: left;
 	padding: 5px 0;
@@ -237,7 +239,7 @@ html body {
 	background: rgba(255,255,255,.05);
 	color: #687085;
 	font-size: 14px;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .topsocial a.fb:hover {
 	background: #4267b2;
@@ -347,10 +349,10 @@ li.acctount-btn {
 	visibility: hidden;
 	padding: 0;
 	background: #fff;
-	box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-	transition: ease-in-out all 0.5s;
-	-webkit-transition: ease-in-out all 0.5s;
-	border-radius: 3px;
+	transition: ease-in-out all 0.2s;
+	-webkit-transition: ease-in-out all 0.2s;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 .main-nav .drop-down:hover > ul {
 	opacity: 1;
@@ -410,7 +412,7 @@ li.acctount-btn {
 	left: -260px;
 	width: 260px;
 	padding-top: 18px;
-	background: rgba(40, 38, 70, 0.8);
+	background: #0c263e;
 	transition: 0.4s;
 }
 .mobile-nav * {
@@ -475,7 +477,7 @@ li.acctount-btn {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: rgba(40, 38, 70, 0.8);
+	background: #0c263e;
 	overflow: hidden;
 	display: none;
 }
@@ -530,7 +532,7 @@ li.acctount-btn {
 	line-height: 33px;
 	color: #fff;
 	padding: 0 18px;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin-top: 29px;
 }
 .logo-navbar .nav-item.buy-ticket a:after {
@@ -610,7 +612,7 @@ li.acctount-btn {
 .rev_slider_wrapper a {
 	display: inline-block;
 	background: #e81f3e;
-	border-radius: 3px;
+	border-radius: 5px;
 	color: #fff;
 	font-weight: 700;
 	font-family: 'Open Sans', sans-serif;
@@ -625,7 +627,7 @@ li.acctount-btn {
 #home-slider .caption a {
 	display: inline-block;
 	background: #e81f3e;
-	border-radius: 3px;
+	border-radius: 5px;
 	line-height: 50px;
 	height: 50px;
 	color: #fff;
@@ -639,7 +641,7 @@ li.acctount-btn {
 	display: inline-block;
 	background: none;
 	border: 2px solid #fff;
-	border-radius: 3px;
+	border-radius: 5px;
 	line-height: 46px;
 	color: #fff;
 	font-weight: 600;
@@ -817,7 +819,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	line-height: 51px;
 	text-align: center;
 	margin: 0px;
-	border-radius: 3px 3px 0 0;
+	border-radius: 5px 3px 0 0;
 }
 .next-match-widget .nmw-wrap {
 	border: 1px solid #e1e1e1;
@@ -908,7 +910,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	color: #fff;
 	line-height: 40px;
 	display: inline-block;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 0 25px;
 	font-size: 12px;
 	font-weight: 800;
@@ -939,11 +941,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	float: left;
 	border: 1px solid #e1e1e1;
 	overflow: hidden;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.05);
 }
 .point-table-widget table {
 	width: 100%;
 	overflow: hidden;
- border-radius:
 }
 .point-table-widget table thead {
 	background: #e81f3e;
@@ -993,6 +995,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353d54', endColorstr='#171e36', GradientType=0 ); /* IE6-9 */
 	margin: 0 0 12px;
 }
+.red-header {
+	line-height: 46px;
+	padding: 0 10px;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: #e81f3e !important;
+	text-align: center;
+	border-radius: 0;
+}
+.red-header-match {
+	line-height: 53px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: #e81f3e !important;
+	text-align: center;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
 .next-match-fixtures:last-child {
     margin-bottom: 0;
 }
@@ -1007,7 +1032,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00171e36', e
 	width: 46%;
 }
 .next-match-fixtures .match-teams-vs li.team-logo strong {
-	font-size: 18px;
+	font-size: 12px;
 	color: #ffff;
 	font-weight: 700;
 	margin: 5px 0 0;
@@ -1190,7 +1215,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	font-size: 12px;
 	text-transform: uppercase;
 	padding: 4px 20px;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .news-box .news-caption {
 	position: absolute;
@@ -1250,7 +1275,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .video-news-box {
 	border: 1px solid #e1e1e1;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	background: #fff;
 	margin: 0 0 12px;
@@ -1271,7 +1296,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	font-size: 12px;
 	line-height: 23px;
 	padding: 0 20px;
-	border-radius: 3px;
+	border-radius: 5px;
 	z-index: 99;
 }
 .vn-txt h4 {
@@ -1414,7 +1439,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	float: left;
 	overflow: hidden;
 	position: relative;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .gallery-thumb span {
 	position: absolute;
@@ -1427,7 +1452,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	text-transform: uppercase;
 	line-height: 28px;
 	padding: 0 15px;
-	border-radius: 3px;
+	border-radius: 5px;
 	z-index: 99;
 }
 .gallery-thumb img {
@@ -1453,7 +1478,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	width: 40px;
 	height: 40px;
 	background: #fff;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin: auto;
 	text-align: center;
 	line-height: 40px;
@@ -1499,7 +1524,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .news-gallery img {
 	width: 100%;
 	height: auto;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .highlights .isotope .item {
 	box-sizing: border-box;
@@ -1508,7 +1533,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .hnews-box {
 	width: 100%;
 	float: left;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 0 10px 22px rgba(0,0,0,.1);
 	margin: 0 0 30px;
@@ -1584,7 +1609,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .player-box {
 	background: #20273f;
-	border-radius: 3px;
+	border-radius: 5px;
 	width: 100%;
 	float: left;
 	margin: 0 0 30px;
@@ -1747,7 +1772,7 @@ a.full-team {
 	font-size: 12px;
 	line-height: 30px;
 	padding: 0 20px;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 a.full-team:hover {
 	background: #e81f3e;
@@ -1853,7 +1878,7 @@ a.full-team:hover {
 .pro-txt a.add2cart {
 	display: inline-block;
 	border: 1px solid #e1e1e1;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-size: 12px;
 	font-weight: 700;
 	color: #bbbbbb;
@@ -2072,7 +2097,7 @@ a.full-team:hover {
 	line-height: 40px;
 	display: inline-block;
 	padding: 0 20px 0 15px;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-size: 12px;
 	color: #222222;
 	text-transform: uppercase;
@@ -2098,7 +2123,7 @@ a.full-team:hover {
 }
 .tweet-box {
 	background: rgba(255,255,255,.15);
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 20px 20px 0;
 	position: relative;
 }
@@ -2243,7 +2268,7 @@ a.full-team:hover {
 .newsletter input {
 	background: none;
 	border: 1px solid #555555;
-	border-radius: 3px;
+	border-radius: 5px;
 	height: 40px;
 	line-height: 38px;
 	font-size: 14px;
@@ -2258,7 +2283,7 @@ a.full-team:hover {
 .newsletter button {
 	float: right;
 	border: 0px;
-	border-radius: 3px;
+	border-radius: 5px;
 	background: #e81f3e;
 	color: #fff;
 	font-weight: 700;
@@ -2308,7 +2333,7 @@ a.full-team:hover {
 .instagram li img {
 	width: 100%;
 	height: auto;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .instagram li:first-child {
 	width: 168px;
@@ -2406,7 +2431,7 @@ h3.wtitle {
 	position: absolute;
 	left: 0;
 	top: 0;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 }
 .story-row h5 {
@@ -2496,7 +2521,7 @@ body button:focus {
 	padding: 0 15px;
 }
 .fvideo-box {
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	position: relative;
 }
@@ -2709,7 +2734,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	line-height: 48px;
 	color: #000;
 	display: block;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-size: 24px;
 	margin: 10px 0;
 }
@@ -2827,14 +2852,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .team-squad-box {
 	width: 100%;
 	float: left;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	position: relative;
 }
 .team-squad-box img {
 	width: 100%;
 	height: auto;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .team-squad-box:after {
 	position: absolute;
@@ -2987,7 +3012,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .news-box-normal .thumb {
 	margin-bottom: 20px;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .news-box-normal .newsp-txt h4 {
 	color: #222222;
@@ -3063,7 +3088,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	top: inherit;
 	color: red;
 	background: #ffff;
-	border-radius: 3px;
+	border-radius: 5px;
 	bottom: 10px;
 	right: 10px;
 	border: 1px solid #e1e1e1;
@@ -3155,7 +3180,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	width: 170px;
 	height: 73px;
 	background: #e81f3e;
-	border-radius: 3px;
+	border-radius: 5px;
 	position: relative;
 	overflow: hidden;
 	padding: 14px 0 0 80px;
@@ -3243,7 +3268,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	line-height: 30px;
 }
 .newsletter-two .form-control {
-	border-radius: 3px;
+	border-radius: 5px;
 	height: 60px;
 	border: 2px solid rgba(255,255,255,.3);
 	color: #f5c30b;
@@ -3266,7 +3291,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	text-transform: uppercase;
 	font-size: 16px;
 	font-weight: 600;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 /********** |== Newsletter End == | **********/
 
@@ -3279,28 +3304,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	background: #fcfcfc;
 }
 .inner-banner-header {
-	background: url(../images/innerbanner.jpg) no-repeat;
 	text-align: center;
-	padding: 110px 0 0;
 	position: relative;
-	min-height: 300px;
 	overflow: hidden;
 }
 .inner-banner-header h1 {
 	color: #fff;
-	font-size: 46px;
+	font-size: 30px;
+	padding: 50px 0 50px 0;
 	font-weight: 700;
 	position: relative;
-}
-.inner-banner-header h1:after {
-	content: attr(data-generated);
-	position: absolute;
-	left: 0;
-	right: 0;
-	font-size: 150px;
-	top: -68px;
-	font-weight: 300;
-	color: rgba(255,255,255,.07);
 }
 .gt-breadcrumbs {
 	position: absolute;
@@ -3539,7 +3552,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	height: 70px;
 }
 .sidebar .widget .top-stories-widget .ts-thumb img {
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .sidebar .widget .top-stories li.story-row {
 	padding: 0 0 15px 75px;
@@ -3560,7 +3573,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	width: 100%;
 	float: left;
 	background: #20273f;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 20px 20px 0;
 	overflow: hidden;
 }
@@ -3727,7 +3740,7 @@ ul.mres {
 	color: #fff;
 	display: inline-block;
 	line-height: 30px;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 0 15px;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -3833,7 +3846,7 @@ ul.mres {
 	background: url(../images/matchfixbg.jpg);
 	width: 100%;
 	float: left;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 }
 .last-match-result-full .p30 {
@@ -3870,7 +3883,7 @@ ul.mres {
 	display: inline-block;
 	line-height: 33px;
 	padding: 0 15px;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-size: 12px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -3953,14 +3966,14 @@ ul.mres {
 	color: #fff;
 	font-weight: 400;
 	line-height: 58px;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 0 20px;
 	margin: 0 0 10px;
 }
 .nms-box {
 	border: 1px solid #e1e1e1;
 	background: #fff;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	position: relative;
 	box-shadow: 0 5px 10px rgba(0,0,0,.05);
@@ -3979,7 +3992,7 @@ ul.mres {
 
 .nms-box .team-logo-right img, .nms-box .team-logo-left img {
 	display: inline-block;
-	height: 40px;
+	height: 80px;
 }
 .nms-box .team-logo-right strong, .nms-box .team-logo-left strong {
 	display: inline-block;
@@ -4036,7 +4049,7 @@ ul.mres {
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 900;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 0 20px;
 }
 .nms-info a:hover {
@@ -4048,7 +4061,7 @@ ul.mres {
 }
 .nms-title {
 	background: #e81f3e;
-	border-radius: 3px;
+	border-radius: 5px;
 	height: 58px;
 	padding: 5px 20px;
 	margin: 0 0 10px;
@@ -4066,7 +4079,7 @@ ul.mres {
 	overflow: hidden;
 	border: 1px solid #e1e1e1;
 	margin: 0 0 60px;
-	border-radius: 3px;
+	border-radius: 5px;
 	background: #fff;
 }
 .next-match-box h6 {
@@ -4082,8 +4095,8 @@ ul.mres {
 .next-match-box .team-logo-left strong, .next-match-box .team-logo-right strong {
 	display: block;
 	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 24px;
-	font-weight: 400;
+	font-size: 14px;
+	font-weight: 600;
 	margin: 10px 0 0;
 }
 .next-match-box .defaultCountdown {
@@ -4156,7 +4169,7 @@ ul.mres {
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0 5px 10px rgba(0,0,0,.05);
-	border-radius: 3px;
+	border-radius: 5px;
 	background: #fff;
 }
 .match-results-list .last-match:after {
@@ -4186,7 +4199,7 @@ ul.mres {
 .last-match-result-full-light {
 	border: 1px solid #e1e1e1;
 	background: #fff;
-	border-radius: 3px;
+	border-radius: 5px;
 	box-shadow: 0 5px 10px rgba(0,0,0,.05);
 	padding: 40px;
 	margin: 0 0 30px;
@@ -4246,7 +4259,7 @@ ul.mres {
 .gal-thumb {
 	width: 100%;
 	float: left;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	position: relative;
 	margin: 0 0 30px;
@@ -4441,7 +4454,7 @@ ul.mres {
 	width: 100%;
 	float: left;
 	border: 1px solid #e1e1e1;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	margin: 0 0 60px;
 	background: #fff;
@@ -4483,7 +4496,7 @@ ul.mres {
 	line-height: 53px;
 	font-weight: 400;
 	padding-left: 30px;
-	border-radius: 3px 3px 0 0;
+	border-radius: 5px 3px 0 0;
 }
 .career-facts table {
 	width: 100%;
@@ -4532,7 +4545,7 @@ ul.mres {
 	width: 100%;
 	float: left;
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: 5px;
 	position: relative;
 	margin: 0 0 10px;
 }
@@ -4639,7 +4652,7 @@ ul.mres {
 	text-align: center;
 	line-height: 38px;
 	font-size: 14px;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .shop-images ul li:hover a {
 	background: #e81f3e;
@@ -4701,7 +4714,7 @@ ul.mres {
 	opacity: 1;
 	background: #fcfcfc;
 	border: 1px solid #dddddd;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 0px;
 	text-align: center;
 	color: #999999;
@@ -4946,14 +4959,14 @@ p.stars a:hover, p.stars a:hover:before {
 }
 .comment-form input.form-control {
 	border: 2px solid #e1e1e1;
-	border-radius: 3px;
+	border-radius: 5px;
 	height: 53px;
 	line-height: 49px;
 	padding: 0 20px;
 }
 .comment-form textarea.form-control {
 	border: 2px solid #e1e1e1;
-	border-radius: 3px;
+	border-radius: 5px;
 	height: 150px;
 	line-height: 24px;
 	padding: 20px;
@@ -4962,7 +4975,7 @@ p.stars a:hover, p.stars a:hover:before {
 	height: 50px;
 	line-height: 50px;
 	border: 0;
-	border-radius: 3px;
+	border-radius: 5px;
 	background: #e81f3e;
 	text-transform: uppercase;
 	font-size: 16px;
@@ -5031,7 +5044,7 @@ p.stars a:hover, p.stars a:hover:before {
 
 .ng-box {
 	background: #fff;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 0 5px 15px rgba(0,0,0,.07);
 	margin: 0 0 30px;
@@ -5105,7 +5118,7 @@ ul.post-meta li i {
 	display: inline-block;
 	padding: 0 20px;
 	text-transform: uppercase;
-	border-radius: 3px;
+	border-radius: 5px;
 	color: #bbbbbb;
 	font-size: 12px;
 	font-weight: 400;
@@ -5129,7 +5142,7 @@ ul.post-meta li i {
 	width: 100%;
 	float: left;
 	background: #fff;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: 0 5px 15px rgba(0,0,0,.07);
 	margin: 0 0 40px;
@@ -5218,7 +5231,7 @@ ul.post-meta li i {
 	display: inline-block;
 	padding: 0 20px;
 	text-transform: uppercase;
-	border-radius: 3px;
+	border-radius: 5px;
 	color: #bbbbbb;
 	font-size: 12px;
 	font-weight: 600;
@@ -5247,7 +5260,7 @@ ul.post-meta li i {
 	background: #38a1f3;
 	color: #fff;
 	padding: 0 20px;
-	border-radius: 3px;
+	border-radius: 5px;
 	line-height: 40px;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: 500;
@@ -5334,7 +5347,7 @@ ul.post-meta li i {
 	width: 100%;
 	float: left;
 	background: #20273f;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 40px;
 	margin: 0 0 40px;
 	position: relative;
@@ -5385,7 +5398,7 @@ ul.post-meta li i {
 	float: left;
 	background: #fff;
 	margin: 0 0 30px;
-	border-radius: 3px;
+	border-radius: 5px;
 	box-shadow: 0 5px 15px rgba(0,0,0,.07);
 	overflow: hidden;
 }
@@ -5448,7 +5461,7 @@ ul.post-meta li i {
 	margin: 30px auto;
 	overflow: hidden;
 	background: #20273f;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 30px;
 	position: relative;
 }
@@ -5506,7 +5519,7 @@ ul.post-meta li i {
 	padding: 3px;
 }
 .small-gallery li img {
-	border-radius: 3px;
+	border-radius: 5px;
 	width: 100%;
 	height: auto;
 }
@@ -5542,7 +5555,7 @@ ul.post-meta li i {
 	width: 100%;
 	float: left;
 	position: relative;
-	border-radius: 3px;
+	border-radius: 5px;
 	background: #f5f5f5;
 	padding: 30px 30px 30px 145px;
 	margin: 0 0 50px;
@@ -5706,7 +5719,7 @@ ul.rep-comments {
 	line-height: 49px;
 	border: 2px solid #e1e1e1;
 	padding: 0 10px;
-	border-radius: 3px;
+	border-radius: 5px;
 	width: 100%;
 	font-size: 16px;
 	color: #666666;
@@ -5726,7 +5739,7 @@ ul.rep-comments {
 	line-height: 50px;
 	color: #fff;
 	font-size: 14px;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 0 20px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -5749,10 +5762,8 @@ ul.rep-comments {
 /******************** |== Match Details Start == | ********************/
 
 .match-header {
-	background: url(../images/match-detailsbg.jpg) no-repeat;
 	padding: 60px 0 0;
 	position: relative;
-	background-size: cover;
 }
 .match-header h5 {
 	color: #ffcb05;
@@ -5796,6 +5807,7 @@ ul.rep-comments {
 }
 .match-header .teamz li.mt-left img {
 	float: right;
+	max-height: 60px;
 }
 .match-header .teamz li.mt-right strong {
 	margin: 0 0 0 20px;
@@ -5805,6 +5817,7 @@ ul.rep-comments {
 }
 .match-header .teamz li.mt-right img {
 	float: left;
+	max-height: 60px;
 }
 .match-header .teamz li.mt-right {
 	float: right;
@@ -5820,7 +5833,7 @@ ul.rep-comments {
 	height: 4px;
 	margin: auto;
 	left: 0;
-	top: -20px;
+	top: -10px;
 	right: 0;
 	bottom: 0;
 	position: absolute;
@@ -5894,7 +5907,7 @@ ul.rep-comments {
 	z-index: 99;
 	margin: 0px;
 	padding: 0px;
-	background: rgba(255,203,5,.20);
+	background: rgba(255, 255, 255, 0.05);
 }
 .m-date-loc li {
 	display: inline-block;
@@ -5921,7 +5934,7 @@ ul.rep-comments {
 	line-height: 53px;
 	font-weight: 400;
 	text-align: center;
-	border-radius: 3px 3px 0 0;
+	border-radius: 5px 3px 0 0;
 }
 .match-results-table table, .game-statistics table {
 	border: 0px;
@@ -5960,7 +5973,7 @@ ul.rep-comments {
 	line-height: 53px;
 	font-weight: 400;
 	text-align: left;
-	border-radius: 3px 3px 0 0;
+	border-radius: 5px 3px 0 0;
 	padding: 0 30px;
 }
 .match-results-table td {
@@ -6002,7 +6015,7 @@ ul.rep-comments {
 	line-height: 53px;
 	font-weight: 400;
 	text-align: left;
-	border-radius: 3px 3px 0 0;
+	border-radius: 5px 3px 0 0;
 	padding: 0 30px;
 }
 .team-one-scrore h4 span {
@@ -6417,7 +6430,7 @@ ul.rep-comments {
 .match-image-collection, .watchvideohighlights {
 	width: 100%;
 	float: left;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	margin: 0 0 50px;
 }
@@ -6427,7 +6440,7 @@ ul.rep-comments {
 	line-height: 53px;
 	font-weight: 400;
 	text-align: left;
-	border-radius: 3px 3px 0 0;
+	border-radius: 5px 3px 0 0;
 	padding: 0 30px;
 }
 .video-img {
@@ -6458,29 +6471,35 @@ ul.rep-comments {
 	float: left;
 }
 .match-players h4 {
-	background: #38a1f3;
+	background: #e81f3e;
 	color: #fff;
 	line-height: 53px;
-	font-weight: 400;
+	font-size: 16px !important;
+	text-align: center !important;
+	font-weight: 700;
 	padding: 0 20px;
-	border-radius: 3px 3px 0 0;
+	border-radius: 5px 5px 0 0;
 }
 .team-palyers {
 	width: 100%;
 	float: left;
 	margin: 0 0 50px;
 }
+.team-palyers a{
+	color: #777777;
+}
 .team-palyers table {
 	width: 100%;
 	border: 1px solid #e1e1e1;
+	overflow: hidden;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.05);
 }
 .team-palyers table td {
-	line-height: 53px;
+	line-height: 45px;
 	padding: 0 10px;
 	border-bottom: 1px solid #e1e1e1;
 }
 .team-palyers table td:first-child {
-	border-right: 1px solid #e1e1e1;
 	text-align: center;
 	color: #777777;
 	font-size: 14px;
@@ -6493,7 +6512,7 @@ ul.rep-comments {
 }
 .team-palyers strong {
 	color: #222222;
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 14px;
 }
 .team-palyers span {
@@ -6511,11 +6530,8 @@ ul.rep-comments {
 .team-palyers .fa-futbol {
 	color: #38a1f3;
 }
-.team-palyers.c2 h4 {
-	background: #a39261;
-}
 .team-palyers.c2 .fa-futbol {
-	color: #a39261;
+	color: #38a1f3;
 }
 /******************** |== Match Details End == | ********************/
 
@@ -6621,7 +6637,7 @@ ul.rep-comments {
 }
 .contact-form .form-control {
 	height: 53px;
-	border-radius: 3px;
+	border-radius: 5px;
 	border: 3px solid #e1e1e1;
 	line-height: 47;
 	padding: 0 20px;
@@ -6639,7 +6655,7 @@ ul.rep-comments {
 	background: #e81f3e;
 	color: #fff;
 	border: 0px;
-	border-radius: 3px;
+	border-radius: 5px;
 	height: 53px;
 	line-height: 53px;
 	letter-spacing: 2px;
@@ -6654,7 +6670,7 @@ ul.rep-comments {
 .contact-box {
 	border: 1px solid #e1e1e1;
 	background: #fff;
-	border-radius: 3px;
+	border-radius: 5px;
 	padding: 20px;
 }
 .contact-box p {
@@ -6728,7 +6744,7 @@ ul.rep-comments {
 	position: relative;
 	overflow: hidden;
 	border: 2px solid #e1e1e1;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin: 0 0 30px;
 }
 .search-form .form-control {
@@ -6760,7 +6776,7 @@ ul.rep-comments {
 	height: 50px;
 	line-height: 50px;
 	padding: 0 20px;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -6901,7 +6917,7 @@ ul.rep-comments {
 	width: 100%;
 	float: left;
 	border: 1px solid #e1e1e1;
-	border-radius: 3px;
+	border-radius: 5px;
 	background: #fff;
 }
 .h3-fixtures .next-match-fixtures.light {
@@ -6928,19 +6944,22 @@ ul.rep-comments {
 	margin: 0;
 }
 .h3-next-match .next-match-box .team-logo-left strong, .h3-next-match .next-match-box .team-logo-right strong {
-	display: inline-block;
+	display: block;
 }
 .h3-next-match .next-match-box .team-logo-left, .h3-next-match .next-match-box .team-logo-right {
-	padding: 80px 0 0;
+	padding: 40px 0 0;
 }
 .h3-next-match .next-match-box h4 {
 	background: #e81f3e;
 	color: #fff;
 	text-align: left;
-	line-height: 58px;
-	font-size: 24px;
-	font-weight: 400;
-	padding-left: 25px;
+	text-transform: uppercase;
+	line-height: 46px;
+	font-size: 14px;
+	font-weight: 600;
+	padding-left: 8px;
+	padding-top: 1px;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 .h3-next-match .next-match-box {
 	border: 0px;
@@ -6961,21 +6980,23 @@ ul.rep-comments {
 	margin-top: 90px;
 }
 #newsupdate-slider .hnews-box {
+	border: 1px solid rgba(225, 225, 225, 0.70);
 	width: 100%;
 	float: left;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	box-shadow: none;
 	margin: 0px;
 }
 #newsupdate-slider .hnews-box .hnews-txt {
-	border: 1px solid #e1e1e1;
+	height: 200px;
 }
 #newsupdate-slider .hnews-box .hnews-txt ul.news-meta {
 	margin-bottom: 7px;
 }
 #newsupdate-slider .hnews-box .rm {
-	margin: 0px;
+	position: absolute;
+	bottom: 0;
 }
 #newsupdate-slider .hnews-box .hnews-txt {
 	padding: 23px 30px 25px;
@@ -7042,17 +7063,6 @@ ul.rep-comments {
 .teams-video .container {
 	position: relative;
 	z-index: 99;
-}
-.teams-video:after {
-	width: 0;
-	height: 0;
-	border-top: 700px solid #b41f3c;
-	border-left: 910px solid transparent;
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	opacity: 0.7;
 }
 .teams-video .point-table-widget {
 	border: 0px;
@@ -7250,7 +7260,7 @@ ul.gallery-row li.gall-cal {
 	background: #e81f3e;
 }
 .blue-bg {
-	background: #001b34;
+	background: #0c263e;
 }
 .gray-bg {
 	background: #f7f7f7;
@@ -7411,7 +7421,7 @@ ul.gallery-row li.gall-cal {
 	line-height: 27px;
 	padding: 0 20px;
 	font-size: 12px;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin: 0 5px;
 }
 .h3-team .nav-item.nav-link.active, .h3-team .nav-link:hover {
@@ -7480,7 +7490,7 @@ ul.gallery-row li.gall-cal {
 	background: #e81f3e;
 	width: 30px;
 	height: 30px;
-	border-radius: 3px;
+	border-radius: 5px;
 	text-align: center;
 	line-height: 30px;
 	color: #fff;
@@ -7730,7 +7740,7 @@ ul.gallery-row li.gall-cal {
 .footer-widget .read-about {
 	background: #33394e;
 	color: #fff;
-	border-radius: 3px;
+	border-radius: 5px;
 	display: inline-block;
 	font-size: 12px;
 	text-transform: uppercase;
@@ -7764,7 +7774,7 @@ ul.gallery-row li.gall-cal {
 	border: 1px solid #222839;
 	position: relative;
 	height: 56px;
-	border-radius: 3px;
+	border-radius: 5px;
 }
 .f-newsletter .input-group .form-control {
 	background: none;
@@ -7943,7 +7953,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00282881', e
 }
 .ms-news-thumb img {
 	margin-top: -20px;
-	border-radius: 3px;
+	border-radius: 5px;
 	width: 100%;
 	height: auto;
 }
@@ -9050,7 +9060,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', e
 
 
 .hvideo-box {
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
 	width: 100%;
 	float: left;
@@ -9191,7 +9201,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00181f37', e
 	color: #fff;
 	width: 30px;
 	height: 30px;
-	border-radius: 3px;
+	border-radius: 5px;
 	text-align: center;
 	line-height: 30px;
 	font-size: 14px;
@@ -9265,7 +9275,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00181f37', e
 	float: left;
 	background: #fff;
 	padding: 25px;
-	border-radius: 3px;
+	border-radius: 5px;
 	box-shadow: 0 5px 15px rgba(0,0,0,.07);
 }
 .sidebar .widget:last-child {

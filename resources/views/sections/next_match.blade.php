@@ -10,19 +10,19 @@
             <div class="row">
                 <ul>
                     <li class="col-md-2">
-                        <div class="team-left"><img src="{{ $nextMatch->homeTeam()->logoUrl() }}" alt=""> <strong>{{ $nextMatch->homeTeam()->name }}</strong></div>
+                        <div class="team-left"><img src="{{ $nextMatch->homeTeam()->logoUrl() }}" > <strong>{{ $nextMatch->homeTeam()->name }}</strong></div>
                     </li>
                     <li class="col-md-2">
                         <p class="mdate-time"> {{ $nextMatch->date }} <strong>{{ date("H:i", strtotime($nextMatch->time)) }}</strong> </p>
                     </li>
                     <li class="col-md-4">
-                        <div class="defaultCountdown" match-date="{{ $firstBlockMatches[0]->date }} {{ $firstBlockMatches[0]->time }}"></div>
+                        <div class="defaultCountdown" match-date="{{ $nextMatch->date }} {{ $nextMatch->time }}"></div>
                     </li>
                     <li class="col-md-2">
                         <p class="match-loc"><i class="fas fa-location-arrow"></i> {{ $nextMatch->location }}</p>
                     </li>
                     <li class="col-md-2">
-                        <div class="team-right"><img src="{{ $nextMatch->awayTeam()->logoUrl() }}" alt=""> <strong>{{ $nextMatch->awayTeam()->name }}</strong></div>
+                        <div class="team-right"><img src="{{ $nextMatch->awayTeam()->logoUrl() }}" > <strong>{{ $nextMatch->awayTeam()->name }}</strong></div>
                     </li>
                 </ul>
             </div>
